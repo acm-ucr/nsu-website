@@ -1,5 +1,7 @@
 # UCR NSU Website 
 
+UCR Nikkei Student Union is UCR's very own Japanese American social club. NSU is a place for students to meet likeminded individuals with similar interests, and to foster friendships and connections throughout their college life. 
+
 ![Next.js](https://img.shields.io/badge/next.js-000000?style=for-the-badge&logo=nextdotjs&logoColor=white)
 ![TypeScript](https://img.shields.io/badge/typescript-%23407ACC.svg?style=for-the-badge&logo=typescript&logoColor=white)
 ![TailwindCSS](https://img.shields.io/badge/tailwindcss-%2338B2AC.svg?style=for-the-badge&logo=tailwind-css&logoColor=white)
