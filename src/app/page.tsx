@@ -11,7 +11,6 @@ const Home = () => {
       <Offer />
       <AdditionalInfo />
       NSU website
-
       <Example text1="Adjust" text2="these" text3="Props" />
     </div>
   );
