@@ -10,7 +10,7 @@ const Home = () => {
       <Welcome />
       <Offer />
       <AdditionalInfo />
-      NSU website
+      NSU website is still developing
       <Example text1="Adjust" text2="these" text3="Props" />
     </div>
   );
