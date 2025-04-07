@@ -7,6 +7,7 @@ const Page = () => {
       <EventsTitleSection />
       <EventTypes />
       <Calendar />
+      wewewewew
     </div>
   );
 };
