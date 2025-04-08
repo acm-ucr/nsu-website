@@ -1,6 +1,6 @@
 const Example = (props: { text1: string; text2: string; text3: string }) => {
   return (
-    <div className="flex w-2/3 flex-col items-center justify-center gap-10 rounded-lg bg-red-200 p-10">
+    <div className="flex w-2/3 flex-col items-center justify-center gap-10 rounded-2xl bg-red-200 p-10">
       <div className="w-1/2 bg-blue-200 p-5 text-center text-4xl">
         {props.text1}
       </div>
