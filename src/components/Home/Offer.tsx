@@ -1,10 +1,10 @@
 const Offer = () => {
   return (
     <div className="flex flex-col gap-10 p-20">
-      <div className="text-nsu-red-100 text-center text-5xl font-bold">
+      <div className="text-nsu-red-100 text-center font-[urbanist] text-5xl font-bold">
         What We Offer:
       </div>
-      <ul className="flex list-disc flex-col gap-5">
+      <ul className="flex list-disc flex-col gap-5 font-[urbanist]">
         <li>
           Bi-weekly General Meetings filled with engaging activities, cultural
           discussions, and fun icebreakers.
