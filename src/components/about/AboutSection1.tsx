@@ -13,15 +13,15 @@ const AboutSection1 = () => {
           Americans through cultural events and social activities.
         </p>
       </div>
-      <div className="mt-7">
-        <div className="relative mx-auto flex w-1/2 justify-center">
+      <div className="mt-6">
+        <div className="relative mx-auto flex w-4/10 justify-center">
           <Image
             className="absolute z-0 mt-2 ml-4 opacity-50"
             src={AboutImg2}
             alt="About1 Image Background"
           />
           <Image
-            className="z-1 mb-9 opacity-100"
+            className="z-1 mb-8 opacity-100"
             src={AboutImg2}
             alt="About1 Image"
           />
