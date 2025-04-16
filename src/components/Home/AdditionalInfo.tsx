@@ -1,6 +1,3 @@
-import "@fontsource/urbanist";
-import "@fontsource/urbanist/700.css";
-
 const AdditionalInfo = () => {
   return (
     <div className="flex flex-col items-center">
