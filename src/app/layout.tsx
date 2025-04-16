@@ -2,7 +2,7 @@ import "./globals.css";
 import { Urbanist } from "next/font/google";
 import { ReactQueryClientProvider } from "@/utils/react-query";
 
-const urbanist = Urbanist({ 
+const urbanist = Urbanist({
   subsets: ["latin"],
   variable: "--font-urbanist",
   display: "swap",
