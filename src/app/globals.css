@@ -1,3 +1,20 @@
+@import url("https://fonts.googleapis.com/css2?family=Urbanist:wght@400;600;700&display=swap");
 @import "tailwindcss";
 
-@config '../../tailwind.config.ts';
+@theme {
+  --color-nsu-red-100: #a02732;
+  --color-nsu-red-200: #70161e;
+  --color-nsu-red-300: #3b252c;
+  --color-nsu-gray-100: #ffffff;
+  --color-nsu-gray-200: #8f8389;
+  --color-nsu-gray-300: #000000;
+  --color-nsu-tan-100: #e7dfd4;
+
+  --font-nsu-main: "Urbanist", sans-serif;
+}
+
+body {
+  font-family: var(--font-nsu-main);
+  background-color: var(--color-nsu-tan-100);
+  color: var(--color-nsu-gray-300);
+}
