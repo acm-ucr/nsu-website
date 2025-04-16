@@ -4,7 +4,7 @@ module.exports = {
   theme: {
     extend: {
       fontFamily: {
-        urbanist: ["var(--font-urbanist)"],
+        urbanist: ["Urbanist"],
       },
       colors: {
         nsu: {
