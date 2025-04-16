@@ -6,7 +6,7 @@ const AboutSection1 = () => {
     <div>
       <div className="bg-nsu-red-200 my-2 h-[4px] w-1/2"></div>
       <div>
-        <p className="font-nsu-main text-nsu-gray-300 mx-8 mt-5 w-3/4 text-base leading-5 tracking-normal">
+        <p className="font-nsu-main text-nsu-gray-300 mx-8 mt-5 w-3/4 text-3xl leading-9 tracking-normal">
           Nikkei Student Union (NSU) is a socio-cultural organization devoted to
           promoting, preserving, and educating the surrounding community and
           college-aged youth about the history of Japanese and Japanese
