@@ -1,6 +1,7 @@
 import "./globals.css";
 import { Urbanist } from "next/font/google";
 import { ReactQueryClientProvider } from "@/utils/react-query";
+import Footer from "@/components/Footer";
 
 const urbanist = Urbanist({
   subsets: ["latin"],
@@ -23,6 +24,8 @@ export default function RootLayout({ children }: LayoutProps) {
     <html lang="en">
       <body className={urbanist.className}>
         <ReactQueryClientProvider>{children}</ReactQueryClientProvider>
+
+        <Footer />
       </body>
     </html>
   );
