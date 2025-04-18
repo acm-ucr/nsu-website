@@ -25,9 +25,9 @@
      inkscape:document-units="mm"
      showborder="true"
      showgrid="true"
-     inkscape:zoom="7.9309791"
-     inkscape:cx="22.758855"
-     inkscape:cy="32.971969"
+     inkscape:zoom="3.4580704"
+     inkscape:cx="37.737809"
+     inkscape:cy="65.788135"
      inkscape:window-width="1512"
      inkscape:window-height="916"
      inkscape:window-x="0"
@@ -62,19 +62,51 @@
      id="layer1"
      transform="translate(-34.641014,-69.999997)">
     <path
-       style="fill:#800000;stroke-width:0.264583"
+       style="fill:#671e21;stroke-width:0;stroke-dasharray:none;fill-opacity:1"
        d="m 34.641014,69.999997 4.330129,7.5 -4.330129,7.499999 h 8.660255 V 69.999997 Z"
        id="path1" />
     <path
-       style="fill:#800000;stroke-width:0.264583"
+       style="fill:#671e21;stroke-width:0;stroke-dasharray:none;fill-opacity:1"
        d="m 43.301269,69.999997 c 0,0 4.330125,1.499999 4.330125,7.5 0,5.999999 -4.330125,7.499999 -4.330125,7.499999 z"
        id="path2" />
     <rect
-       style="fill:#800000;stroke-width:0.264583"
+       style="fill:#671e21;stroke-width:0;stroke-dasharray:none;fill-opacity:1"
        id="rect2"
        width="0.98265928"
        height="15"
        x="42.318611"
        y="70" />
+    <rect
+       style="fill:#671e21;stroke-width:0;stroke-dasharray:none;fill-opacity:1"
+       id="rect3"
+       width="0"
+       height="14.999996"
+       x="43.30127"
+       y="70" />
+    <rect
+       style="fill:#671e21;stroke-width:0;stroke-dasharray:none;fill-opacity:1"
+       id="rect4"
+       width="3.859726"
+       height="7.2284141"
+       x="41.173595"
+       y="72.771584" />
+    <rect
+       style="fill:#671e21;stroke-width:0;stroke-dasharray:none;fill-opacity:1"
+       id="rect4-7"
+       width="3.859726"
+       height="7.2284141"
+       x="39.83717"
+       y="77.385788" />
+    <rect
+       style="fill:#671e21;stroke-width:0;stroke-dasharray:none;fill-opacity:1"
+       id="rect5"
+       width="2.5980763"
+       height="1.8130745"
+       x="41.569218"
+       y="70.68692" />
+    <path
+       style="fill:#671e21;stroke-width:0;stroke-dasharray:none;fill-opacity:1"
+       d="m 42.739005,84.614202 0.95789,2e-6 -0.395626,0.385793 z"
+       id="path5" />
   </g>
 </svg>
