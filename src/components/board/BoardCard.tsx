@@ -26,6 +26,7 @@ const BoardCard = ({
     const lines = totalHeight / lineHeight;
 
     if (lines > 2) {
+      // Determines if the role name is long or short.
       setIsMultiLine(true);
       setContentH(totalHeight + 20);
       setNsubarH(totalHeight * SCALE_FACTOR);
@@ -56,8 +57,8 @@ const BoardCard = ({
             height: "100%",
           }}
         />
-
         {isMultiLine ? (
+          // If the role name is too long.
           <div
             className="absolute z-20"
             style={{
@@ -126,6 +127,7 @@ const BoardCard = ({
             </svg>
           </div>
         ) : (
+          // If the role name isn't too long.
           <div
             className="absolute z-20"
             style={{
@@ -159,7 +161,6 @@ const BoardCard = ({
                 backgroundImage: `url('assets/nsunamebarflag.svg')`,
                 backgroundSize: "contain",
                 backgroundPosition: "bottom",
-                transition: "height 0.3s ease",
               }}
             />
 
@@ -173,7 +174,6 @@ const BoardCard = ({
                 backgroundImage: `url('assets/nsunamebarflag.svg')`,
                 backgroundSize: "contain",
                 backgroundPosition: "bottom",
-                transition: "height 0.3s ease",
               }}
             />
           </div>
