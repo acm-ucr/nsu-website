@@ -11,11 +11,6 @@ const Page = () => {
         name="Cade Jordan"
         role="VICE PRESIDENT"
       />
-      <BoardCard
-        image="/board/inc_rep.webp"
-        name="Reid Ikeda"
-        role="INTERCOLLEGIATE NIKKEI (INC) REPRESENTATIVE"
-      />
     </div>
   );
 };
