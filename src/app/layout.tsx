@@ -24,10 +24,11 @@ export default function RootLayout({ children }: LayoutProps) {
   return (
     <html lang="en">
       <body className={urbanist.className}>
-        <Navbar />
-        <ReactQueryClientProvider>{children}</ReactQueryClientProvider>
-
-        <Footer />
+        <ReactQueryClientProvider>
+          <Navbar />
+          {children}
+          <Footer />
+        </ReactQueryClientProvider>
       </body>
     </html>
   );
