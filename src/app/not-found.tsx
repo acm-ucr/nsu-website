@@ -3,7 +3,7 @@ import Link from "next/link";
 import { Button } from "../components/Button";
 import nekoImg from "../../public/assets/nsu9.webp";
 import kitsuneImg from "../../public/assets/nsu10.webp";
-import tanukiImg from "../../public/assets/nsu11.webp";
+import inuImg from "../../public/assets/nsu11.webp";
 
 const NotFound = () => {
   return (
@@ -16,12 +16,12 @@ const NotFound = () => {
         </Button>
       </div>
 
-      <Image src={tanukiImg} className="absolute mb-120 ml-[33%]" alt="" />
+      <Image src={inuImg} className="absolute mb-120 ml-[33%]" alt="dog icon" />
 
       <div className="border-nsu-red-200 relative w-[70%] overflow-hidden rounded-lg border-4 shadow-[inset_0_0_20px_rgba(0,0,0,0.5)]">
         <div className="mt-13 flex w-full flex-col place-items-center">
-          <Image src={nekoImg} className="absolute mt-36 ml-[80%]" alt="" />
-          <Image src={kitsuneImg} className="absolute mt-54 mr-[80%]" alt="" />
+          <Image src={nekoImg} className="absolute mt-36 ml-[80%]" alt="cat icon" />
+          <Image src={kitsuneImg} className="absolute mt-54 mr-[80%]" alt="fox icon" />
 
           <div className="flex items-center justify-center">
             <h1
