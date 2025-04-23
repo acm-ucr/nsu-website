@@ -5,19 +5,18 @@ const Welcome = () => {
   return (
     <div>
       <div className="bg-nsu-red-200 mt-100 flex flex-row">
-        <div className="mt-10 mb-10 w-1/2">
-          <div className="relative mx-auto w-[90%]">
+        <div className="mt-15 mb-15 w-1/2">
+          <div className="relative mx-auto w-[90%] max-w-xl">
             <Image
-              className="absolute z-0 mt-2 ml-4 opacity-50"
+              className="relative top-3 left-3 z-0 h-auto w-full opacity-50"
               src={WelcImg}
               alt="Welcome Image Background"
-              fill
-              style={{ objectFit: "cover", zIndex: 0 }}
             />
             <Image
-              className="relative z-1 mb-8 opacity-100"
+              className="absolute z-1 mb-8 h-auto w-full opacity-100"
               src={WelcImg}
               alt="Welcome Image"
+              fill
             />
           </div>
         </div>
