@@ -20,8 +20,16 @@ const NotFound = () => {
 
       <div className="border-nsu-red-200 relative w-[70%] overflow-hidden rounded-lg border-4 shadow-[inset_0_0_20px_rgba(0,0,0,0.5)]">
         <div className="mt-13 flex w-full flex-col place-items-center">
-          <Image src={nekoImg} className="absolute mt-36 ml-[80%]" alt="cat icon" />
-          <Image src={kitsuneImg} className="absolute mt-54 mr-[80%]" alt="fox icon" />
+          <Image
+            src={nekoImg}
+            className="absolute mt-36 ml-[80%]"
+            alt="cat icon"
+          />
+          <Image
+            src={kitsuneImg}
+            className="absolute mt-54 mr-[80%]"
+            alt="fox icon"
+          />
 
           <div className="flex items-center justify-center">
             <h1
