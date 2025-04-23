@@ -1,5 +1,5 @@
 const Gallery1 = () => {
-  return <div>Gallery Section 1</div>;
+  return <div>Carousel</div>;
 };
 
 export default Gallery1;
