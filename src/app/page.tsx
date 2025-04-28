@@ -6,7 +6,7 @@ import JoinUsButton from "@/components/Home/JoinUsButton";
 
 const Home = () => {
   return (
-    <div className="flex h-screen w-screen flex-col items-center justify-center">
+    <div className="flex flex-col items-center justify-center">
       <Landing />
       <Welcome />
       <Offer />
