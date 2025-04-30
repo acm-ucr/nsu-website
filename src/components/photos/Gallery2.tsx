@@ -1,6 +1,8 @@
 const gallery = [
   "/photos/CIMG1842.webp",
   "/photos/CIMG1845.webp",
+  "/photos/CIMG1854.webp",
+  "/photos/CIMG1869.webp",
   "/photos/CIMG1887.webp",
   "/photos/CIMG1897.webp",
   "/photos/CIMG1972.webp",
@@ -13,6 +15,7 @@ const gallery = [
   "/photos/CIMG2169.webp",
   "/photos/CIMG2174.webp",
   "/photos/CIMG2185.webp",
+  "/photos/CIMG2281.webp",
   "/photos/DSC00045.webp",
   "/photos/DSC00060.webp",
   "/photos/DSC00082.webp",
@@ -33,7 +36,9 @@ const gallery = [
   "/photos/IMG_6175.webp",
   "/photos/IMG_6328.webp",
   "/photos/IMG_6339.webp",
+  "/photos/IMG_6343.webp",
   "/photos/IMG_7395.webp",
+  "/photos/reveal.webp",
 ];
 
 const Gallery2 = () => {
