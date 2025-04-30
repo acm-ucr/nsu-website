@@ -48,7 +48,7 @@ const Landing = () => {
           </div>
         </div>
       </div>
-      <div className="flex w-1/2 justify-center">
+      <div className="w-1/2 justify-center">
         <Image
           src={Lanterns}
           alt="NSU Lanterns"
