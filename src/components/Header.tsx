@@ -15,7 +15,7 @@ const Header = ({ headerString }: { headerString: string }) => {
           d="M10,100 C200,-10 300,-10 490,100"
           className="overflow-visible"
         />
-        <text className="fill-[#70161e] font-[sans-serif] text-[90px] font-bold [letter-spacing:5px]">
+        <text className="fill-[#70161e]  text-[90px] font-bold [letter-spacing:5px]">
           <textPath
             href="#curvedText"
             startOffset="50%"
