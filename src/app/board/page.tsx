@@ -4,17 +4,13 @@ import BoardCard from "@/components/board/BoardCard";
 import presidentImage from "@/public/board/president.webp";
 import Header from "@/components/Header";
 
+
 export default function Page() {
   return (
     <div>
       <Header headerString="BOARD" />
       <BoardTitleSection />
       <BoardGrid />
-      <BoardCard
-        image={presidentImage}
-        name="Cade Jordan"
-        role="VICE PRESIDENT"
-      />
     </div>
   );
 }
