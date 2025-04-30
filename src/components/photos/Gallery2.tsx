@@ -1,3 +1,14 @@
+const gallery = [
+  "/photos/CIMG1842.webp",
+  "/photos/CIMG1845.webp",
+  "/photos/CIMG1887.webp",
+  "/photos/CIMG1897.webp",
+  "/photos/CIMG1972.webp",
+  "/photos/CIMG1974.webp",
+  "/photos/CIMG1980.webp",
+  "/photos/CIMG1982.webp",
+];
+
 const Gallery2 = () => {
   return (
     <div>
@@ -15,8 +26,13 @@ const Gallery2 = () => {
             key={rowIdx}
             className={`mb-3 grid grid-cols-5 gap-3 ${rowIdx % 2 !== 0 ? "ml-15" : "mr-15"}`}
           >
-            {[...Array(5)].map((_, i) => (
-              <div key={i} className="aspect-square bg-gray-400"></div>
+            {gallery.slice(rowIdx * 5, rowIdx * 5 + 5).map((src, i) => (
+              <img
+                key={i}
+                src={src}
+                alt={"Gallery image ${rowIdx * 5 + i+1}"}
+                className="aspect-square object-cover"
+              />
             ))}
           </div>
         ))}
