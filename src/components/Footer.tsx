@@ -1,7 +1,7 @@
+import React from "react";
 import Link from "next/link";
 import Image from "next/image";
 import logo from "@/public/assets/logo2.webp";
-import footerImage from "@/public/assets/footer.svg";
 import {
   FaInstagram,
   FaDiscord,
@@ -12,14 +12,11 @@ import {
 import { SiLinktree } from "react-icons/si";
 import { FiMail } from "react-icons/fi";
 
-const Footer = () => {
+const Footer: React.FC = () => {
   return (
     <footer className="relative w-full">
       <div
-        className="h-115 w-full bg-top bg-repeat-x"
-        style={{
-          backgroundImage: `url(${footerImage.src})`,
-        }}
+        className={`h-115 w-full bg-[url('/assets/footer.svg')] bg-top bg-repeat-x contrast-150 [-ms-interpolation-mode:nearest-neighbor] [image-rendering:crisp-edges]`}
       />
 
       <div className="bg-nsu-gray-300 bg-opacity-80 text-nsu-gray-100 relative px-4 py-6 sm:px-8">
@@ -38,29 +35,29 @@ const Footer = () => {
               </p>
             </div>
 
-            <hr />
+            <hr className="border-nsu-gray-100 opacity-50" />
 
             <div className="mt-3 flex justify-center space-x-4 md:justify-end">
-              <Link href="/" target="_blank">
-                <FaDiscord className="size-8" />
+              <Link href="/" target="_blank" aria-label="Discord">
+                <FaDiscord className="h-8 w-8" />
               </Link>
-              <Link href="/" target="_blank">
-                <FaTiktok className="size-8" />
+              <Link href="/" target="_blank" aria-label="TikTok">
+                <FaTiktok className="h-8 w-8" />
               </Link>
-              <Link href="/" target="_blank">
-                <FaInstagram className="size-8" />
+              <Link href="/" target="_blank" aria-label="Instagram">
+                <FaInstagram className="h-8 w-8" />
               </Link>
-              <Link href="/" target="_blank">
-                <FaYoutube className="size-8" />
+              <Link href="/" target="_blank" aria-label="YouTube">
+                <FaYoutube className="h-8 w-8" />
               </Link>
-              <Link href="/" target="_blank">
-                <SiLinktree className="size-8" />
+              <Link href="/" target="_blank" aria-label="Linktree">
+                <SiLinktree className="h-8 w-8" />
               </Link>
-              <Link href="/" target="_blank">
-                <FaLinkedinIn className="size-8" />
+              <Link href="/" target="_blank" aria-label="LinkedIn">
+                <FaLinkedinIn className="h-8 w-8" />
               </Link>
-              <Link href="/" target="_blank">
-                <FiMail className="size-8" />
+              <Link href="mailto:someone@example.com" aria-label="Email">
+                <FiMail className="h-8 w-8" />
               </Link>
             </div>
           </div>
