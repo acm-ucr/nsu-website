@@ -13,7 +13,7 @@ interface BoardCardProps {
 const BoardCard = ({ image, name, role }: BoardCardProps) => {
   return (
     <div className="inline-block flex-none overflow-visible p-10 pb-10">
-      <div className="relative aspect-[217/304] w-[10vw] max-w-[217px]">
+      <div className="relative m-auto aspect-[217/304] w-[28vw] max-w-[217px] md:w-[20vw] lg:w-[16vw]">
         <div className="outline-nsu-red-200 absolute inset-0 z-10 rounded-md shadow-lg outline-3 outline-solid" />
 
         <div className="absolute top-[5%] left-[9%] z-0 h-full w-full">
@@ -26,8 +26,8 @@ const BoardCard = ({ image, name, role }: BoardCardProps) => {
         </div>
 
         <div className="absolute bottom-[-10%] left-0 z-20 h-[20%] w-[110%]">
-          <div className="bg-nsu-red-200 absolute bottom-[20%] z-10 flex h-full w-full flex-col justify-center rounded-md px-2 break-words shadow-[0_12px_24px_rgba(0,0,0,1)]">
-            <div className="font-urbanist text-center text-xs font-bold text-white sm:text-xs md:text-sm">
+          <div className="bg-nsu-red-200 absolute top-[5%] z-10 flex h-auto w-full flex-col justify-center rounded-md px-2 break-words shadow-[0_12px_24px_rgba(0,0,0,1)]">
+            <div className="font-urbanist text-center text-xs font-bold text-white md:text-sm lg:text-2xl">
               {name}
             </div>
             <div className="font-urbanist text-center text-xs text-white sm:text-xs md:text-sm">
