@@ -4,7 +4,7 @@ import WelcImg from "@/public/hero.webp";
 const Welcome = () => {
   return (
     <div>
-      <div className="bg-nsu-red-200 mt-100 flex flex-row">
+      <div className="bg-nsu-red-200 flex flex-row">
         <div className="mt-15 mb-15 w-1/2">
           <div className="relative mx-auto w-[90%] max-w-xl">
             <Image
