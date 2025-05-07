@@ -14,8 +14,8 @@ import { FiMail } from "react-icons/fi";
 
 const Footer: React.FC = () => {
   return (
-    <footer className="w-full">
-      <div className="h-55 w-full bg-[url('/assets/footer.svg')] bg-[length:450px] bg-top bg-repeat-x contrast-150 [-ms-interpolation-mode:nearest-neighbor] [image-rendering:crisp-edges]" />
+    <footer className="relative w-full">
+      <div className="h-55 w-full bg-[url('/assets/footer.svg')] bg-[length:450px] bg-clip-content bg-top bg-repeat-x contrast-150 [-ms-interpolation-mode:nearest-neighbor] [image-rendering:crisp-edges]" />
 
       <div className="bg-nsu-gray-300 bg-opacity-80 text-nsu-gray-100 relative px-4 py-6 sm:px-8">
         <div className="max-w-8xl mx-auto flex flex-col items-center justify-between md:flex-row">
