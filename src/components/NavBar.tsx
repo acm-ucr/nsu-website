@@ -16,7 +16,7 @@ const NAVBAR = [
     title: "BOARD",
   },
   {
-    href: "/event",
+    href: "/events",
     title: "EVENTS",
   },
   {
