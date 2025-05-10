@@ -42,24 +42,24 @@ const gallery = [
 ];
 
 const Gallery2 = () => {
-  const imagesPerRow = 5;
+  const imagesPerRow = 4;
   const rows = Math.ceil(gallery.length / imagesPerRow);
 
   return (
     <div>
-      <div className="ml-15 flex flex-col">
+      <div className="flex flex-col items-center justify-center md:ml-20 md:items-start">
         <div>
-          <p className="text-nsu-red-200 font-nsu-main text-2xl leading-9 font-bold tracking-normal">
-            Photos from some yr/event
+          <p className="text-nsu-red-200 font-nsu-main text-lg leading-9 font-bold md:mx-5 md:text-2xl">
+            Photos from past years
           </p>
         </div>
-        <div className="bg-nsu-red-200 my-2 mr-auto h-[4px] w-3/5"></div>
+        <div className="bg-nsu-red-200 mx-auto my-2 h-[4px] w-7/10 md:mx-0 md:w-3/5"></div>
       </div>
       <div className="mt-5 mb-5">
         {[...Array(rows)].map((_, rowIdx) => (
           <div
             key={rowIdx}
-            className={`mb-3 grid grid-cols-5 gap-3 ${rowIdx % 2 !== 0 ? "ml-15" : "mr-15"}`}
+            className={`mb-1 grid grid-cols-4 gap-1 md:mb-3 md:gap-3 ${rowIdx % 2 !== 0 ? "ml-5 md:ml-15" : "mr-5 md:mr-15"}`}
           >
             {gallery
               .slice(
