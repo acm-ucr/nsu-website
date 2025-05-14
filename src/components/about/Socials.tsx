@@ -3,15 +3,18 @@ import { socialLanterns } from "@/data/Socials";
 
 const Socials = () => {
   return (
-    <div className="my-16 flex w-full flex-col items-center">
-      <div className="text-nsu-red-200 items-center text-5xl font-extrabold lg:text-6xl xl:text-7xl">
+    // add px-4 on mobile
+    <div className="my-16 flex w-full flex-col items-center px-4 md:px-0">
+      <div className="text-nsu-red-200 text-4xl font-extrabold md:text-5xl lg:text-6xl xl:text-7xl">
         SOCIALS
       </div>
-      <div className="border-nsu-red-200 mt-6 w-[80%] border-t-4 md:border-t-5 lg:border-t-6" />
-      {/*Desktop*/}
-      <div className="relative hidden h-110 w-[90%] flex-wrap justify-center md:flex lg:h-150 lg:w-[80%]">
-        {socialLanterns.map(({ icon, href, ml, lineHeight }, index) => (
-          <div key={index} className={`flex w-1/7 flex-col items-center ${ml}`}>
+
+      <div className="border-nsu-red-200 mt-6 w-full border-t-4 md:w-4/5 md:border-t-5 lg:border-t-6" />
+
+      {/* desktop */}
+      <div className="relative hidden flex-wrap justify-center md:flex md:h-110 md:w-[90%] lg:h-150 lg:w-[80%]">
+        {socialLanterns.map(({ icon, href, ml, lineHeight }, i) => (
+          <div key={i} className={`flex w-1/7 flex-col items-center ${ml}`}>
             <div
               className={`${lineHeight} border-r-4 lg:border-r-5 xl:border-r-6`}
             />
@@ -30,12 +33,12 @@ const Socials = () => {
         ))}
       </div>
 
-      {/*Mobile*/}
-      <div className="relative m-4 grid grid-cols-2 gap-12 md:hidden">
-        {socialLanterns.map(({ icon, href }, index) => (
-          <div key={index}>
+      {/* mobile (smaller gap, smaller icons) */}
+      <div className="grid w-full grid-cols-2 gap-6 md:hidden">
+        {socialLanterns.map(({ icon, href }, i) => (
+          <div key={i} className="flex justify-center">
             <Link
-              className="text-nsu-red-300 flex items-center duration-150 hover:scale-110"
+              className="text-nsu-red-300 flex items-center text-2xl duration-150 hover:scale-110"
               href={href}
               target="_blank"
             >
