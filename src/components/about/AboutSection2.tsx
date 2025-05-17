@@ -8,7 +8,7 @@ const AboutSection2 = () => {
   return (
     <div>
       <div className="bg-nsu-red-200 my-2 mt-10 ml-auto h-[4px] w-1/2"></div>
-      <section className="bg-nsu-tan-100 relative flex flex-col items-start p-8">
+      <section className="bg-nsu-tan-100 relative flex flex-col items-start p-8 overflow-hidden">
         <div className="ml-auto w-3/4 text-right">
           <p className="font-nsu-main text-nsu-gray-300 text-3xl leading-9 tracking-normal">
             We host bi-weekly General Meetings where our NSU community gathers
