@@ -4,9 +4,8 @@ import AboutImg2 from "../../../public/about/about2.webp";
 const AboutSection1 = () => {
   return (
     // add px-4 on mobile, reset at md
-    <div className="px-4 md:px-0">
+    <div className="px-4 md:px-6">
       <div className="bg-nsu-red-200 mx-auto my-2 h-[4px] w-full md:w-1/2" />
-
       <div>
         <p className="font-nsu-main text-nsu-gray-300 mt-5 w-full text-center text-xl leading-7 tracking-normal md:w-3/4 md:text-left md:text-3xl md:leading-9">
           Nikkei Student Union (NSU) is a socio-cultural organization devoted to
