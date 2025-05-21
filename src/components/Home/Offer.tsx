@@ -4,7 +4,7 @@ import { motion } from "motion/react";
 const Offer = () => {
   const titleAnimation = {
     initial: { scale: 0.7, opacity: 0 },
-    whileInView: { scale: 1, opacity: 1, transition: { duration: 0.15 } },
+    whileInView: { scale: 1, opacity: 1, transition: { duration: 0.25 } },
   };
 
   const listFade = {
@@ -12,7 +12,7 @@ const Offer = () => {
     whileInView: {
       opacity: 1,
       x: 0,
-      transition: { duration: 0.2, delay: 0.13 },
+      transition: { duration: 0.25, delay: 0.13 },
     },
   };
 

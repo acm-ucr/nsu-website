@@ -4,12 +4,12 @@ import { motion } from "motion/react";
 const AdditionalInfo = () => {
   const titleAnimation = {
     initial: { scale: 0.7, opacity: 0 },
-    whileInView: { scale: 1.1, opacity: 1, transition: { duration: 0.15 } },
+    whileInView: { scale: 1.1, opacity: 1, transition: { duration: 0.25 } },
   };
 
   const fadeInRight = {
     initial: { opacity: 0, x: 30 },
-    whileInView: { opacity: 1, x: 0, transition: { duration: 0.2 } },
+    whileInView: { opacity: 1, x: 0, transition: { duration: 0.25 } },
   };
 
   const delayWords = {
@@ -17,7 +17,7 @@ const AdditionalInfo = () => {
     whileInView: {
       opacity: 1,
       x: 0,
-      transition: { duration: 0.2, delay: 0.13 },
+      transition: { duration: 0.25, delay: 0.13 },
     },
   };
 
