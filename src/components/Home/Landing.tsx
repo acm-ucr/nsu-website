@@ -14,9 +14,9 @@ const Landing = () => {
           </div>
           <div className="flex flex-col md:space-y-3 md:pt-8 lg:pt-20">
             <motion.div
-              initial={{ x: -200 }}
-              whileInView={{ x: 0 }}
-              transition={{ duration: 0.25 }}
+              initial={{ x: -200, opacity: 0 }}
+              whileInView={{ x: 0, opacity: 1 }}
+              transition={{ duration: 0.5 }}
               viewport={{ once: true }}
               className="mt-10 ml-[12vw] text-4xl font-extrabold md:text-6xl lg:text-8xl"
             >
@@ -29,9 +29,9 @@ const Landing = () => {
               <h1 className="text-nsu-red-200 relative z-10">Nikkei</h1>
             </motion.div>
             <motion.div
-              initial={{ x: -200 }}
-              whileInView={{ x: 0 }}
-              transition={{ duration: 0.25 }}
+              initial={{ x: -200, opacity: 0 }}
+              whileInView={{ x: 0, opacity: 1 }}
+              transition={{ duration: 0.5 }}
               viewport={{ once: true }}
               className="ml-15 ml-[22vw] text-4xl font-extrabold md:text-6xl lg:text-8xl"
             >
@@ -44,9 +44,9 @@ const Landing = () => {
               <h1 className="text-nsu-red-200 relative z-10">Student</h1>
             </motion.div>
             <motion.div
-              initial={{ x: -200 }}
-              whileInView={{ x: 0 }}
-              transition={{ duration: 0.25 }}
+              initial={{ x: -200, opacity: 0 }}
+              whileInView={{ x: 0, opacity: 1 }}
+              transition={{ duration: 0.5 }}
               viewport={{ once: true }}
               className="ml-35 ml-[37vw] text-4xl font-extrabold md:text-6xl lg:text-8xl"
             >
@@ -61,8 +61,9 @@ const Landing = () => {
           </div>
         </div>
         <motion.div
-          initial={{ y: "-50%" }}
-          whileInView={{ y: "0%" }}
+          initial={{ y: "-100%", opacity: 0 }}
+          whileInView={{ y: "0%", opacity: 1 }}
+          transition={{ duration: 0.5, delay: 0.25 }}
           viewport={{ once: true }}
           className="relative z-0 flex flex-[3]"
         >
@@ -76,6 +77,7 @@ const Landing = () => {
       <motion.div
         initial={{ scale: 0 }}
         whileInView={{ scale: 1 }}
+        transition={{ duration: 0.5, delay: 0.25 }}
         viewport={{ once: true }}
         className="text-nsu-black-100 border-nsu-red-200 mx-[6vw] mb-5 border-b-4 py-2 text-center text-[0.80rem] md:mt-5 md:text-[1.50rem] lg:ml-20 lg:w-9/16 xl:text-[1.68rem]"
       >

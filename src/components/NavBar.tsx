@@ -29,7 +29,7 @@ const NavBar = () => {
   const [isOpen, setIsOpen] = useState(false);
 
   return (
-    <div className="relative z-10 flex w-full flex-row items-center bg-black font-bold">
+    <div className="relative z-20 flex w-full flex-row items-center bg-black font-bold">
       {/*Desktop*/}
       <div className="hidden w-full md:flex">
         <Link href="/" className="flex flex-row items-center">
