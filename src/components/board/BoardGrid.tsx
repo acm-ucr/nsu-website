@@ -2,7 +2,7 @@
 
 import BoardCard from "@/components/board/BoardCard";
 import { BOARD } from "@/data/Board";
-import { motion } from "framer-motion";
+import { motion } from "motion";
 
 const BoardGrid = () => {
   return (
