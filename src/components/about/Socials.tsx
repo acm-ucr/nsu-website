@@ -5,7 +5,7 @@ import { motion } from "motion/react";
 
 const Socials = () => {
   return (
-    <div className="my-16 flex w-full flex-col items-center">
+    <div className="my-16 flex w-full flex-col items-center md:scale-75">
       <div className="text-nsu-red-200 items-center text-5xl font-extrabold lg:text-6xl xl:text-7xl">
         SOCIALS
       </div>
