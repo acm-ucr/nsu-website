@@ -11,16 +11,8 @@ const Home = () => {
   return (
     <div className="flex flex-col items-center justify-center">
       <Landing />
-      <motion.div
-        initial={{ opacity: 0 }}
-        whileInView={{ opacity: 100 }}
-        transition={{ delay: 0.5, duration: 0.5 }}
-        viewport={{ once: true }}
-      >
-        <Welcome />
-      </motion.div>
+      <Welcome />
       <Offer />
-
       <JoinUsButton />
       <motion.div
         initial={{ opacity: 0 }}
