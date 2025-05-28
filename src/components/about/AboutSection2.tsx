@@ -9,7 +9,7 @@ const AboutSection2 = () => {
     // same horizontal padding
     <div className="px-4 md:px-0">
       <div className="bg-nsu-red-200 mx-auto my-2 mt-10 h-[4px] w-full md:w-1/2" />
-      <section className="bg-nsu-tan-100 relative flex flex-col items-start p-4 md:p-8">
+      <section className="bg-nsu-tan-100 relative flex flex-col items-start overflow-hidden p-4 md:p-8">
         <div className="w-full text-left md:ml-auto md:w-3/4 md:text-right">
           <p className="font-nsu-main text-nsu-gray-300 text-center text-xl leading-7 tracking-normal md:text-left md:text-3xl md:leading-9">
             We host bi-weekly General Meetings where our NSU community gathers
