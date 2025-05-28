@@ -1,3 +1,7 @@
+"use client";
+
+import { motion } from "motion/react";
+
 const gallery = [
   "/photos/CIMG1842.webp",
   "/photos/CIMG1845.webp",
@@ -48,10 +52,8 @@ const Gallery2 = () => {
   return (
     <div>
       <div className="flex flex-col items-center justify-center md:ml-20 md:items-start">
-        <div>
-          <p className="text-nsu-red-200 font-nsu-main text-lg leading-9 font-bold md:mx-5 md:text-2xl">
-            Photos from past years
-          </p>
+        <div className="text-nsu-red-200 font-nsu-main text-lg leading-9 font-bold md:mx-5 md:text-2xl">
+          Photos from past years
         </div>
         <div className="bg-nsu-red-200 mx-auto my-2 h-[4px] w-7/10 md:mx-0 md:w-3/5"></div>
       </div>
@@ -67,12 +69,22 @@ const Gallery2 = () => {
                 rowIdx * imagesPerRow + imagesPerRow,
               )
               .map((src, i) => (
-                <img
+                <motion.div
                   key={rowIdx * imagesPerRow + i}
-                  src={src}
-                  alt={`Gallery image ${rowIdx * imagesPerRow + i + 1}`}
-                  className="aspect-square object-cover"
-                />
+                  initial={{ opacity: 0, x: rowIdx % 2 === 0 ? 30 : -30 }}
+                  whileInView={{ opacity: 1, x: 0 }}
+                  viewport={{ once: true }}
+                  transition={{
+                    duration: 0.5,
+                    delay: (rowIdx * imagesPerRow + i) * 0.1,
+                  }}
+                >
+                  <img
+                    src={src}
+                    alt={`Gallery image ${rowIdx * imagesPerRow + i + 1}`}
+                    className="aspect-square object-cover"
+                  />
+                </motion.div>
               ))}
           </div>
         ))}
