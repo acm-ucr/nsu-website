@@ -1,7 +1,6 @@
 "use client";
 import { motion } from "motion/react";
 
-
 const Offer = () => {
   const titleAnimation = {
     initial: { scale: 0.7, opacity: 0 },
