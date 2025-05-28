@@ -36,7 +36,7 @@ const NavBar = () => {
           <Image src={NSULogo} alt="NSU_LOGO" className="m-2 w-1/3 lg:w-auto" />
           <div className="px-4 text-3xl text-white lg:text-4xl">NSU</div>
         </Link>
-        <div className="ml-auto flex items-center justify-center gap-4 text-2xl text-white lg:gap-12 lg:text-3xl">
+        <div className="ml-auto flex items-center justify-center gap-4 text-2xl text-white lg:gap-8 lg:text-3xl">
           {NAVBAR.map(({ href, title }, index) => (
             <div key={index} className="relative">
               <Link
@@ -49,7 +49,7 @@ const NavBar = () => {
           ))}
           <Link
             href="/404"
-            className="bg-nsu-red-200 mx-6 rounded-lg p-[2%] text-white duration-150 hover:scale-110 lg:rounded-[16px] lg:text-3xl"
+            className="bg-nsu-red-200 mr-6 rounded-lg p-[2%] text-white duration-150 hover:scale-110 lg:rounded-[16px] lg:text-3xl"
           >
             JOIN
           </Link>
@@ -68,7 +68,7 @@ const NavBar = () => {
         />
       </div>
       {isOpen && (
-        <div className="absolute z-20 mt-48 flex w-full flex-col items-center justify-center bg-black pb-4 text-xl font-medium text-white">
+        <div className="absolute z-20 mt-54 flex w-full flex-col items-center justify-center bg-black pb-4 text-xl font-medium text-white">
           <Link href="/">HOME</Link>
           {NAVBAR.map(({ href, title }, index) => (
             <div key={index} className="">
@@ -77,6 +77,7 @@ const NavBar = () => {
               </Link>
             </div>
           ))}
+          <Link href="/404">JOIN</Link>
         </div>
       )}
     </div>
