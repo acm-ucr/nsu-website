@@ -52,7 +52,7 @@ const EventTypes = () => {
           </div>
         </div>
 
-        <p className="text-urbanist order-3 mx-10 py-7 text-center text-xl/7 tracking-wide md:order-3 md:ml-10 md:w-9/10 md:py-10 md:text-2xl/8 lg:w-9/10 lg:text-start lg:text-3xl/14 xl:ml-20 xl:text-3xl/10">
+        <p className="text-urbanist order-3 mx-10 py-7 text-center text-xl/7 tracking-wide md:order-3 md:ml-10 md:w-9/10 md:py-10 md:text-2xl/8 lg:w-9/10 lg:text-start lg:text-2xl/10 xl:ml-20 xl:text-3xl/10">
           Join our Big Little program and become part of the UCR NSU family!
           Bigs serve as mentors and friends, while Littles get the opportunity
           to connect and grow within the club. It's the perfect way to meet new
@@ -60,9 +60,9 @@ const EventTypes = () => {
         </p>
       </div>
 
-      <div className="grid grid-cols-1 gap-5 py-8 md:py-32 lg:grid-cols-2">
-        <div className="order-2 md:row-span-2 lg:order-1">
-          <div className="relative mx-16 flex justify-center">
+      <div className="grid grid-cols-1 gap-5 border-4 border-red-500 py-8 md:py-32 lg:grid-cols-2">
+        <div className="order-2 flex flex-col items-center justify-center md:row-span-2 lg:order-1">
+          <div className="relative mx-16 flex w-[90%] justify-center">
             <Image
               src={RetreatImg}
               alt="Winter Retreat Image Shadow"
@@ -101,7 +101,7 @@ const EventTypes = () => {
           />
         </div>
 
-        <p className="text-urbanist order-3 mx-10 py-7 text-center text-xl/7 tracking-wide md:w-9/10 md:py-10 md:text-2xl/8 lg:order-3 lg:w-9/10 lg:text-end lg:text-3xl/14 xl:text-3xl/10">
+        <p className="text-urbanist order-3 mx-10 py-7 text-center text-xl/7 tracking-wide md:w-9/10 md:py-10 md:text-2xl/8 lg:order-3 lg:w-9/10 lg:text-end lg:text-2xl/10 xl:text-3xl/10">
           Escape to the mountains in Big Bear for a fun-filled weekend at our
           annual Winter Retreat! Enjoy bonding with friends over food, games,
           and cozy vibes. Hit the slopes for some snowboarding or skiing, or
@@ -134,8 +134,8 @@ const EventTypes = () => {
           </div>
         </div>
 
-        <div className="order-2 md:order-2 md:row-span-2">
-          <div className="relative mx-16 flex w-auto justify-center">
+        <div className="order-2 flex flex-col items-center justify-center border-4 border-blue-500 md:order-2 md:row-span-2">
+          <div className="relative mx-16 flex w-[90%] flex-col items-center justify-center">
             <Image
               src={CultureNightImg}
               alt="Culture Night Image Shadow"
@@ -149,7 +149,7 @@ const EventTypes = () => {
           </div>
         </div>
 
-        <p className="text-urbanist order-3 mx-10 py-7 text-center text-xl/7 tracking-wide md:order-3 md:ml-10 md:w-9/10 md:py-10 md:text-2xl/8 lg:w-9/10 lg:text-start lg:text-3xl/14 xl:ml-20 xl:text-3xl/10">
+        <p className="text-urbanist order-3 mx-10 py-7 text-center text-xl/7 tracking-wide md:order-3 md:ml-10 md:w-9/10 md:py-10 md:text-2xl/8 lg:w-9/10 lg:text-start lg:text-2xl/10 xl:ml-20 xl:text-3xl/10">
           Join our Big Little program and become part of the UCR NSU family!
           Bigs serve as mentors and friends, while Littles get the opportunity
           to connect and grow within the club. It's the perfect way to meet new
@@ -158,8 +158,8 @@ const EventTypes = () => {
       </div>
 
       <div className="grid grid-cols-1 gap-5 py-8 md:py-32 lg:grid-cols-2">
-        <div className="order-2 md:row-span-2 lg:order-1">
-          <div className="relative mx-16 flex justify-center">
+        <div className="order-2 flex flex-col items-center justify-center md:row-span-2 lg:order-1 lg:mb-10">
+          <div className="relative mx-16 flex w-[90%] justify-center">
             <Image
               src={BanquetImg}
               alt="Banquet Image Shadow"
@@ -198,7 +198,7 @@ const EventTypes = () => {
           />
         </div>
 
-        <p className="text-urbanist order-3 mx-10 py-7 text-center text-xl/7 tracking-wide md:w-9/10 md:py-10 md:text-2xl/8 lg:order-3 lg:w-9/10 lg:text-end lg:text-3xl/14 xl:text-3xl/10">
+        <p className="text-urbanist order-3 mx-10 py-7 text-center text-xl/7 tracking-wide md:order-3 md:ml-10 md:w-9/10 md:py-10 md:text-2xl/8 lg:w-9/10 lg:text-start lg:text-2xl/10 xl:ml-20 xl:text-3xl/10">
           Wrap up the year with our NSU Banquet, a night of celebration,
           reflection, and appreciation for our amazing members. Join us as we
           honor our seniors, relive cherished memories, and recognize the
