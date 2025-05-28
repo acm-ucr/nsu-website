@@ -22,7 +22,7 @@ const EventTypes = () => {
             <div className="ml-8 flex flex-col items-start py-1 md:py-4 lg:ml-10 xl:ml-20">
               <div className="flex flex-col items-start md:items-end">
                 <div className="font-urbanist text-nsu-red-200 text-xl font-extrabold md:text-4xl lg:text-4xl xl:text-5xl">
-                  Big Little Program
+                  NSU Big/Little
                 </div>
                 <div className="font-urbanist text-nsu-red-200 text-lg font-extrabold md:text-2xl lg:text-2xl xl:text-3xl">
                   (Fall Quarter)
