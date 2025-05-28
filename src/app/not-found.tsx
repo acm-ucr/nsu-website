@@ -19,7 +19,7 @@ const NotFound = () => {
       <Image src={inuImg} className="absolute mb-120 ml-[33%]" alt="dog icon" />
 
       <div className="border-nsu-red-200 relative w-[70%] overflow-hidden rounded-lg border-4 shadow-[inset_0_0_20px_rgba(0,0,0,0.5)]">
-        <div className="mt-13 flex w-full flex-col place-items-center">
+        <div className="mt-10 flex w-full flex-col place-items-center">
           <Image
             src={nekoImg}
             className="absolute mt-36 ml-[80%]"
@@ -31,17 +31,24 @@ const NotFound = () => {
             alt="fox icon"
           />
 
-          <div className="flex items-center justify-center">
-            <h1
-              className="text-nsu-tan-100 absolute z-0 mr-2 mb-2 text-9xl font-bold"
-              style={{ WebkitTextStroke: "3px #70161e" }}
-            >
-              404
-            </h1>
-            <h1 className="text-nsu-red-200 z-1 text-9xl font-bold">404</h1>
+          <div className="flex flex-col items-center justify-center">
+            <div className="item-center relative flex justify-center">
+              <h1
+                className="text-nsu-tan-100 relative text-center text-5xl font-bold sm:text-5xl md:text-6xl lg:text-7xl"
+                style={{
+                  WebkitTextStroke:
+                    "1px #70161e; transform: translate(-2px, -2px);",
+                }}
+              >
+                404
+              </h1>
+              <h1 className="text-nsu-red-200 absolute text-center text-5xl font-bold sm:text-5xl md:text-6xl lg:text-7xl">
+                404
+              </h1>
+            </div>
           </div>
 
-          <h2 className="text-nsu-red-300 mb-35 text-8xl font-light whitespace-nowrap">
+          <h2 className="text-nsu-red-300 mb-8 px-2 text-center text-3xl font-light whitespace-nowrap sm:text-3xl md:text-4xl lg:text-5xl">
             page not found
           </h2>
         </div>
@@ -49,5 +56,4 @@ const NotFound = () => {
     </div>
   );
 };
-
 export default NotFound;
