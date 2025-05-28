@@ -32,23 +32,28 @@ const NotFound = () => {
           />
 
           <div className="flex flex-col items-center justify-center">
-            <div className="relative flex justify-center item-center">
-            <h1
-              className="relative text-nsu-tan-100 text-5xl sm:text-5xl md:text-6xl lg:text-7xl font-bold text-center"
-              style={{ WebkitTextStroke: "1px #70161e; transform: translate(-2px, -2px);" }}
-            >
-              404
-             </h1>
-            <h1 className="absolute text-5xl sm:text-5xl md:text-6xl lg:text-7xl font-bold text-nsu-red-200 text-center">404</h1>
+            <div className="item-center relative flex justify-center">
+              <h1
+                className="text-nsu-tan-100 relative text-center text-5xl font-bold sm:text-5xl md:text-6xl lg:text-7xl"
+                style={{
+                  WebkitTextStroke:
+                    "1px #70161e; transform: translate(-2px, -2px);",
+                }}
+              >
+                404
+              </h1>
+              <h1 className="text-nsu-red-200 absolute text-center text-5xl font-bold sm:text-5xl md:text-6xl lg:text-7xl">
+                404
+              </h1>
             </div>
           </div>
 
-          <h2 className="text-nsu-red-300 mb-8 text-3xl sm:text-3xl md:text-4xl lg:text-5xl font-light text-center px-2 whitespace-nowrap">
+          <h2 className="text-nsu-red-300 mb-8 px-2 text-center text-3xl font-light whitespace-nowrap sm:text-3xl md:text-4xl lg:text-5xl">
             page not found
-          </h2> 
+          </h2>
         </div>
       </div>
     </div>
-    );
-  }
+  );
+};
 export default NotFound;
