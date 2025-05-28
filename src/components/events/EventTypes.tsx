@@ -60,7 +60,7 @@ const EventTypes = () => {
         </p>
       </div>
 
-      <div className="grid grid-cols-1 gap-5 border-4 border-red-500 py-8 md:py-32 lg:grid-cols-2">
+      <div className="grid grid-cols-1 gap-5 py-8 md:py-32 lg:grid-cols-2">
         <div className="order-2 flex flex-col items-center justify-center md:row-span-2 lg:order-1">
           <div className="relative mx-16 flex w-[90%] justify-center">
             <Image
@@ -134,7 +134,7 @@ const EventTypes = () => {
           </div>
         </div>
 
-        <div className="order-2 flex flex-col items-center justify-center border-4 border-blue-500 md:order-2 md:row-span-2">
+        <div className="order-2 flex flex-col items-center justify-center md:order-2 md:row-span-2">
           <div className="relative mx-16 flex w-[90%] flex-col items-center justify-center">
             <Image
               src={CultureNightImg}
