@@ -4,9 +4,13 @@ import fanImg from "../../public/assets/fan.webp";
 const Header = ({ headerString }: { headerString: string }) => {
   return (
     <div className="relative mt-10 mb-5 flex flex-col items-center justify-center">
-      <Image src={fanImg} alt="fan image" className="z-0 size-[25%]"></Image>
+      <Image
+        src={fanImg}
+        alt="fan image"
+        className="z-0 size-[50%] md:size-[25%]"
+      ></Image>
 
-      <svg viewBox="0 0 500 1" className="absolute z-1 h-full w-1/4">
+      <svg viewBox="0 0 500 1" className="absolute z-1 h-full w-1/2 md:w-1/4">
         <path
           id="curvedText"
           fill="none"
