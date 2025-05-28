@@ -12,7 +12,7 @@ import BanquetImg from "../../../public/events/banquet.webp";
 
 const EventTypes = () => {
   return (
-    <div>
+    <div className="mt-10">
       <div className="grid grid-cols-1 gap-5 lg:grid-cols-2">
         <div className="order-1 mb-6 -ml-4 w-full md:order-1 md:mr-6 md:mb-0">
           <div
@@ -32,7 +32,7 @@ const EventTypes = () => {
             <Image
               src={DangoImg}
               alt="Dango Clipart"
-              className="absolute top-0 right-0 w-[100px] -translate-y-16 translate-x-12 md:w-[150px] lg:-translate-y-20 lg:translate-x-16 xl:w-[220px] xl:-translate-y-30 xl:translate-x-18"
+              className="absolute top-0 right-0 hidden w-[100px] -translate-y-16 translate-x-12 md:flex md:w-[150px] lg:flex lg:-translate-y-20 lg:translate-x-16 xl:flex xl:w-[220px] xl:-translate-y-30 xl:translate-x-18"
             />
           </div>
         </div>
@@ -52,7 +52,7 @@ const EventTypes = () => {
           </div>
         </div>
 
-        <p className="text-urbanist order-3 mx-10 py-7 text-center text-xl/8 tracking-wide md:order-3 md:ml-10 md:w-9/10 md:py-10 md:text-2xl/8 lg:w-9/10 lg:text-start lg:text-3xl/14 xl:ml-20 xl:text-4xl/14">
+        <p className="text-urbanist order-3 mx-10 py-7 text-center text-xl/7 tracking-wide md:order-3 md:ml-10 md:w-9/10 md:py-10 md:text-2xl/8 lg:w-9/10 lg:text-start lg:text-3xl/14 xl:ml-20 xl:text-3xl/10">
           Join our Big Little program and become part of the UCR NSU family!
           Bigs serve as mentors and friends, while Littles get the opportunity
           to connect and grow within the club. It's the perfect way to meet new
@@ -97,11 +97,11 @@ const EventTypes = () => {
           <Image
             src={RamenImg}
             alt="Ramen Clipart"
-            className="absolute top-0 right-0 w-[100px] -translate-x-8 -translate-y-16 md:w-[150px] lg:-translate-y-20 lg:translate-x-4 xl:w-[220px] xl:-translate-x-12 xl:-translate-y-30"
+            className="absolute top-0 right-0 hidden w-[100px] -translate-x-8 -translate-y-16 md:flex md:w-[150px] lg:flex lg:-translate-y-20 lg:translate-x-4 xl:flex xl:w-[220px] xl:-translate-x-12 xl:-translate-y-30"
           />
         </div>
 
-        <p className="text-urbanist order-3 mx-10 py-7 text-center text-xl/8 tracking-wide md:w-9/10 md:py-10 md:text-2xl/8 lg:order-3 lg:w-9/10 lg:text-end lg:text-3xl/14 xl:text-4xl/14">
+        <p className="text-urbanist order-3 mx-10 py-7 text-center text-xl/7 tracking-wide md:w-9/10 md:py-10 md:text-2xl/8 lg:order-3 lg:w-9/10 lg:text-end lg:text-3xl/14 xl:text-3xl/10">
           Escape to the mountains in Big Bear for a fun-filled weekend at our
           annual Winter Retreat! Enjoy bonding with friends over food, games,
           and cozy vibes. Hit the slopes for some snowboarding or skiing, or
@@ -129,7 +129,7 @@ const EventTypes = () => {
             <Image
               src={OnigiriImg}
               alt="Onigiri Clipart"
-              className="absolute top-0 right-0 w-[100px] -translate-y-8 translate-x-6 scale-x-[-1] rotate-25 md:w-[150px] lg:-translate-y-10 lg:translate-x-8 xl:w-[200px] xl:-translate-y-15"
+              className="absolute top-0 right-0 hidden w-[100px] -translate-y-8 translate-x-6 scale-x-[-1] rotate-25 md:flex md:w-[150px] lg:flex lg:-translate-y-10 lg:translate-x-11 xl:flex xl:w-[200px] xl:-translate-y-15"
             />
           </div>
         </div>
@@ -149,7 +149,7 @@ const EventTypes = () => {
           </div>
         </div>
 
-        <p className="text-urbanist order-3 mx-10 py-7 text-center text-xl/8 tracking-wide md:order-3 md:ml-10 md:w-9/10 md:py-10 md:text-2xl/8 lg:w-9/10 lg:text-start lg:text-3xl/14 xl:ml-20 xl:text-4xl/14">
+        <p className="text-urbanist order-3 mx-10 py-7 text-center text-xl/7 tracking-wide md:order-3 md:ml-10 md:w-9/10 md:py-10 md:text-2xl/8 lg:w-9/10 lg:text-start lg:text-3xl/14 xl:ml-20 xl:text-3xl/10">
           Join our Big Little program and become part of the UCR NSU family!
           Bigs serve as mentors and friends, while Littles get the opportunity
           to connect and grow within the club. It's the perfect way to meet new
@@ -194,11 +194,11 @@ const EventTypes = () => {
           <Image
             src={TaiyakiImg}
             alt="Taiyaki Clipart"
-            className="absolute top-0 right-0 w-[100px] -translate-x-8 -translate-y-16 rotate-50 md:w-[150px] lg:-translate-y-20 lg:translate-x-4 xl:w-[220px] xl:-translate-x-12 xl:-translate-y-30"
+            className="absolute top-0 right-0 hidden w-[100px] -translate-x-8 -translate-y-16 rotate-50 md:flex md:w-[150px] lg:flex lg:-translate-y-20 lg:translate-x-4 xl:flex xl:w-[220px] xl:-translate-x-12 xl:-translate-y-30"
           />
         </div>
 
-        <p className="text-urbanist order-3 mx-10 py-7 text-center text-xl/8 tracking-wide md:w-9/10 md:py-10 md:text-2xl/8 lg:order-3 lg:w-9/10 lg:text-end lg:text-3xl/14 xl:text-4xl/14">
+        <p className="text-urbanist order-3 mx-10 py-7 text-center text-xl/7 tracking-wide md:w-9/10 md:py-10 md:text-2xl/8 lg:order-3 lg:w-9/10 lg:text-end lg:text-3xl/14 xl:text-3xl/10">
           Wrap up the year with our NSU Banquet, a night of celebration,
           reflection, and appreciation for our amazing members. Join us as we
           honor our seniors, relive cherished memories, and recognize the
