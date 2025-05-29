@@ -20,7 +20,7 @@ function Calendar({
         formatWeekdayName: (weekday) =>
           weekday.toLocaleString("en-US", { weekday: "long" }).toUpperCase(),
       }}
-      className={cn("w-full m-auto xl:w-[80%] p-[2.55%]", className)}
+      className={cn("m-auto w-full p-[2.55%] xl:w-[80%]", className)}
       classNames={{
         months: "flex flex-col sm:flex-row gap-2 w-full",
         month:
@@ -68,10 +68,16 @@ function Calendar({
       }}
       components={{
         IconLeft: ({ className, ...props }) => (
-          <ChevronLeft className={cn("size-4 md:size-8 lg:size-10", className)} {...props} />
+          <ChevronLeft
+            className={cn("size-4 md:size-8 lg:size-10", className)}
+            {...props}
+          />
         ),
         IconRight: ({ className, ...props }) => (
-          <ChevronRight className={cn("size-4 md:size-8 lg:size-10", className)} {...props} />
+          <ChevronRight
+            className={cn("size-4 md:size-8 lg:size-10", className)}
+            {...props}
+          />
         ),
       }}
       {...props}
