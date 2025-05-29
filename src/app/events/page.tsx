@@ -1,4 +1,4 @@
-import {Calendar} from "@/components/ui/calendar";
+import { Calendar } from "@/components/ui/calendar";
 import EventTypes from "@/components/events/EventTypes";
 import Header from "@/components/Header";
 
@@ -7,7 +7,7 @@ const Page = () => {
     <div>
       <Header headerString="EVENTS" />
       <EventTypes />
-      <Calendar/>
+      <Calendar />
     </div>
   );
 };
