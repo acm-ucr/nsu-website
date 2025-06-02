@@ -22,6 +22,43 @@ const Footer: React.FC = () => {
   const [linkedinHover, setLinkedinHover] = useState(false);
   const [emailHover, setEmailHover] = useState(false);
 
+  const iconHover = [
+    "h-8",
+    "w-8",
+    "transform",
+    "transition-transform",
+    "duration-200",
+  ].join(" ");
+
+  const discordHoverClass = [
+    iconHover,
+    discordHover ? "scale-110" : "scale-100",
+  ].join(" ");
+  const tiktokHoverClass = [
+    iconHover,
+    tiktokHover ? "scale-110" : "scale-100",
+  ].join(" ");
+  const instagramHoverClass = [
+    iconHover,
+    instagramHover ? "scale-110" : "scale-100",
+  ].join(" ");
+  const youtubeHoverClass = [
+    iconHover,
+    youtubeHover ? "scale-110" : "scale-100",
+  ].join(" ");
+  const linktreeHoverClass = [
+    iconHover,
+    linktreeHover ? "scale-110" : "scale-100",
+  ].join(" ");
+  const linkedinHoverClass = [
+    iconHover,
+    linkedinHover ? "scale-110" : "scale-100",
+  ].join(" ");
+  const emailHoverClass = [
+    iconHover,
+    emailHover ? "scale-110" : "scale-100",
+  ].join(" ");
+
   return (
     <footer className="relative w-full">
       <div className="h-55 w-full bg-[url('/assets/footer.svg')] bg-[length:450px] bg-clip-content bg-top bg-repeat-x contrast-150 [-ms-interpolation-mode:nearest-neighbor] [image-rendering:crisp-edges]" />
@@ -50,11 +87,7 @@ const Footer: React.FC = () => {
                 onMouseLeave={() => setDiscordHover(false)}
               >
                 <Link href="/" target="_blank" aria-label="Discord">
-                  <FaDiscord
-                    className={`h-8 w-8 transform transition-transform duration-200 ${
-                      discordHover ? "scale-110" : "scale-100"
-                    }`}
-                  />
+                  <FaDiscord className={discordHoverClass} />
                 </Link>
               </div>
 
@@ -63,11 +96,7 @@ const Footer: React.FC = () => {
                 onMouseLeave={() => setTiktokHover(false)}
               >
                 <Link href="/" target="_blank" aria-label="TikTok">
-                  <FaTiktok
-                    className={`h-8 w-8 transform transition-transform duration-200 ${
-                      tiktokHover ? "scale-110" : "scale-100"
-                    }`}
-                  />
+                  <FaTiktok className={tiktokHoverClass} />
                 </Link>
               </div>
 
@@ -76,11 +105,7 @@ const Footer: React.FC = () => {
                 onMouseLeave={() => setInstagramHover(false)}
               >
                 <Link href="/" target="_blank" aria-label="Instagram">
-                  <FaInstagram
-                    className={`h-8 w-8 transform transition-transform duration-200 ${
-                      instagramHover ? "scale-110" : "scale-100"
-                    }`}
-                  />
+                  <FaInstagram className={instagramHoverClass} />
                 </Link>
               </div>
 
@@ -89,11 +114,7 @@ const Footer: React.FC = () => {
                 onMouseLeave={() => setYoutubeHover(false)}
               >
                 <Link href="/" target="_blank" aria-label="YouTube">
-                  <FaYoutube
-                    className={`h-8 w-8 transform transition-transform duration-200 ${
-                      youtubeHover ? "scale-110" : "scale-100"
-                    }`}
-                  />
+                  <FaYoutube className={youtubeHoverClass} />
                 </Link>
               </div>
 
@@ -102,11 +123,7 @@ const Footer: React.FC = () => {
                 onMouseLeave={() => setLinktreeHover(false)}
               >
                 <Link href="/" target="_blank" aria-label="Linktree">
-                  <SiLinktree
-                    className={`h-8 w-8 transform transition-transform duration-200 ${
-                      linktreeHover ? "scale-110" : "scale-100"
-                    }`}
-                  />
+                  <SiLinktree className={linktreeHoverClass} />
                 </Link>
               </div>
 
@@ -115,11 +132,7 @@ const Footer: React.FC = () => {
                 onMouseLeave={() => setLinkedinHover(false)}
               >
                 <Link href="/" target="_blank" aria-label="LinkedIn">
-                  <FaLinkedinIn
-                    className={`h-8 w-8 transform transition-transform duration-200 ${
-                      linkedinHover ? "scale-110" : "scale-100"
-                    }`}
-                  />
+                  <FaLinkedinIn className={linkedinHoverClass} />
                 </Link>
               </div>
 
@@ -128,11 +141,7 @@ const Footer: React.FC = () => {
                 onMouseLeave={() => setEmailHover(false)}
               >
                 <Link href="mailto:someone@example.com" aria-label="Email">
-                  <FiMail
-                    className={`h-8 w-8 transform transition-transform duration-200 ${
-                      emailHover ? "scale-110" : "scale-100"
-                    }`}
-                  />
+                  <FiMail className={emailHoverClass} />
                 </Link>
               </div>
             </div>
