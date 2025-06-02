@@ -1,4 +1,4 @@
-import Calendar from "@/components/events/Calendar";
+import { Calendar } from "@/components/ui/calendar";
 import EventTypes from "@/components/events/EventTypes";
 import Header from "@/components/Header";
 
