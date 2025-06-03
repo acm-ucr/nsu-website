@@ -5,6 +5,7 @@ import Link from "next/link";
 import NSULogo from "@/public/assets/logo1.webp";
 import { Menu } from "lucide-react";
 import { useState } from "react";
+import { usePathname } from "next/navigation";
 
 const NAVBAR = [
   {
@@ -28,6 +29,8 @@ const NAVBAR = [
 const NavBar = () => {
   const [isOpen, setIsOpen] = useState(false);
 
+  const pathName = usePathname();
+
   return (
     <div className="relative flex w-full flex-row items-center bg-black font-bold">
       {/*Desktop*/}
@@ -41,7 +44,11 @@ const NavBar = () => {
             <div key={index} className="relative">
               <Link
                 href={href}
-                className="hover:text-nsu-gray-200 no-underline duration-150 hover:scale-110 hover:underline"
+                className={`${
+                  pathName === href
+                    ? "text-nsu-red-100 underline"
+                    : "hover:text-nsu-gray-200 no-underline duration-150 hover:scale-110 hover:underline"
+                }`}
               >
                 {title}
               </Link>
@@ -69,10 +76,27 @@ const NavBar = () => {
       </div>
       {isOpen && (
         <div className="absolute z-20 mt-54 flex w-full flex-col items-center justify-center bg-black pb-4 text-xl font-medium text-white">
-          <Link href="/">HOME</Link>
+          <Link
+            href="/"
+            className={`${
+              pathName === "/"
+                ? "text-nsu-red-100 underline"
+                : "hover:text-nsu-gray-200 no-underline duration-150 hover:scale-110 hover:underline"
+            }`}
+          >
+            HOME
+          </Link>
           {NAVBAR.map(({ href, title }, index) => (
             <div key={index} className="">
-              <Link href={href} onClick={() => setIsOpen(false)}>
+              <Link
+                href={href}
+                onClick={() => setIsOpen(false)}
+                className={`${
+                  pathName === href
+                    ? "text-nsu-red-100 underline"
+                    : "hover:text-nsu-gray-200 no-underline duration-150 hover:scale-110 hover:underline"
+                }`}
+              >
                 {title}
               </Link>
             </div>
