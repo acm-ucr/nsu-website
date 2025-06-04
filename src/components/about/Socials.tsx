@@ -3,7 +3,6 @@ import Link from "next/link";
 import { socialLanterns } from "@/data/Socials";
 import { motion } from "motion/react";
 
-
 const AnimateLanternStrings = (index: number) => ({
   initial: { opacity: 0, scaleY: 0 },
   whileInView: {
@@ -80,9 +79,8 @@ const Socials = () => {
             variants={AnimateLanterns(index)}
             initial="initial"
             whileInView="whileInView"
-            viewport={{ once: true }}
           >
-            <div key={index}>
+            <div>
               <Link
                 className="text-nsu-red-300 flex items-center duration-150 hover:scale-110"
                 href={href}
