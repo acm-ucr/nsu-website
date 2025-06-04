@@ -6,21 +6,148 @@ import { DayPicker } from "react-day-picker";
 
 import { cn } from "@/lib/utils";
 import { buttonVariants } from "@/components/ui/button";
+import * as motion from "motion/react-client";
+
+
+const slideUp = {
+  hidden: { opacity: 0, y: 5 },
+  show: {
+    opacity: 1,
+    y: 0,
+  },
+};
+const slideDown = {
+  hidden: { opacity: 0, y: -5 },
+  show: {
+    opacity: 1,
+    y: 0,
+  },
+};
+const transition = {
+  duration: 0.3,
+};
+
+
+export type GoogleEventProps = {
+  start: {
+    dateTime: string;
+  };
+  end: {
+    dateTime: string;
+  };
+  location: string;
+  description: string;
+  summary: string;
+};
+
+export type EventProps = Partial<{
+  start: string;
+  end: string;
+  location: string;
+  description: string;
+  title: string;
+}>;
+
+export type CalendarProps = React.ComponentProps<typeof DayPicker> & {
+  events: EventProps[];
+  setCurrent: (props: EventProps) => void;
+};
+
+
+interface DayProps {
+  date: Date;
+  displayMonth: Date;
+  events: EventProps[];
+  setCurrent: (props: EventProps) => void;
+}
+
+const Day = ({ date, displayMonth, events, setCurrent }: DayProps) => {
+  const today = new Date();
+  const isToday =
+    today.getDate() === date.getDate() &&
+    today.getMonth() === date.getMonth() &&
+    today.getFullYear() === date.getFullYear();
+  const currentMonth = displayMonth.getMonth() === date.getMonth();
+  const filteredEvents = events?.filter(({ start, end }) => {
+    if (!start || !end) return false;
+    const eventStartDate = new Date(start);
+    const eventEndDate = new Date(end);
+
+    eventStartDate.setHours(0, 0, 0, 0);
+    eventEndDate.setHours(23, 59, 59, 999);
+
+    return (
+      date >= eventStartDate && date <= eventEndDate && eventEndDate >= today
+    );
+  });
+
+  return (
+    <motion.div
+      variants={slideDown}
+      transition={{ ...transition, delay: 0.2 }}
+      initial="hidden"
+      whileInView="show"
+      viewport={{ once: true, amount: 0.2 }}
+      className={`${isToday ? "bg-nsu-red-100 shadow-[inset_0_0_16px_rgba(0,0,0,0.5)]" : currentMonth ? "bg-transparent" : "bg-nsu-red-100 shadow-[inset_0_0_16px_rgba(0,0,0,0.5)]"}  h-full rounded-xl scrollbar-hidden flex h-28 w-full flex-col overflow-y-scroll p-0.5`}
+    >
+      <p
+        className={`${currentMonth ? "" : "opacity-80"} ${isToday && "font-bold text-white"} rounded-xl text-fit sticky m-1 px-1 text-center md:text-left md:text-xl`}
+      >
+        {date.getDate()}
+      </p>
+
+      {filteredEvents?.map(
+        ({ title, start, end, location, description }, index) => {
+          const startDate = new Date(start as string);
+
+          if (
+            startDate.getDate() === date.getDate() &&
+            startDate.getMonth() === date.getMonth() &&
+            startDate.getFullYear() === date.getFullYear()
+          ) {
+            return (
+              <motion.div
+                variants={slideUp}
+                transition={{ ...transition, delay: 0.2 }}
+                initial="hidden"
+                whileInView="show"
+                viewport={{ once: true, amount: 0.2 }}
+                className={`${isToday ? "bg-nsu-red-200 text-nsu-gray-100" : "bg-nsu-tan-100 text-white"} mb-0.5 flex w-full cursor-pointer p-1 text-center font-medium transition hover:bg-opacity-100 hover:opacity-60`}
+                key={index}
+                onClick={() =>
+                  setCurrent({ title, start, end, location, description })
+                }
+              >
+                <span className="my-auto h-5 w-full truncate text-sm">
+                  {title}
+                </span>
+              </motion.div>
+            );
+          }
+        },
+      )}
+    </motion.div>
+  );
+};
+
 
 function Calendar({
   className,
   classNames,
   showOutsideDays = true,
+  events,
+  setCurrent,
   ...props
-}: React.ComponentProps<typeof DayPicker>) {
+}: CalendarProps) {
+  console.log("Calendar events:", events);
   return (
     <DayPicker
       showOutsideDays={showOutsideDays}
       formatters={{
         formatWeekdayName: (weekday) =>
-          weekday.toLocaleString("en-US", { weekday: "long" }).toUpperCase(),
+          weekday.toLocaleString("en-US", { weekday: "short" }).toUpperCase(),
       }}
-      className={cn("m-auto w-full p-[2.55%] xl:w-[80%]", className)}
+      className={cn("m-auto w-full p-[2.55%] xl:w-[80%] scale-80", className)}
       classNames={{
         months: "flex flex-col sm:flex-row gap-2 w-full",
         month:
@@ -77,6 +204,14 @@ function Calendar({
           <ChevronRight
             className={cn("size-4 md:size-8 lg:size-10", className)}
             {...props}
+          />
+        ),
+        Day: ({ displayMonth, date }) => (
+          <Day
+            date={date}
+            displayMonth={displayMonth}
+            events={events}
+            setCurrent={setCurrent}
           />
         ),
       }}

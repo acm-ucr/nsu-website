@@ -12,7 +12,7 @@ import BanquetImg from "../../../public/events/banquet.webp";
 
 const EventTypes = () => {
   return (
-    <div className="mt-10">
+    <div className="mt-10a">
       <div className="grid grid-cols-1 gap-5 lg:grid-cols-2">
         <div className="order-1 mb-6 -ml-4 w-full md:order-1 md:mr-6 md:mb-0">
           <div
