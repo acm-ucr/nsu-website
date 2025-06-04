@@ -13,9 +13,8 @@ const Socials = () => {
       {/*Desktop*/}
       <div className="relative hidden h-110 w-[90%] flex-wrap justify-center md:flex lg:h-150 lg:w-[80%]">
         {socialLanterns.map(({ icon, href, ml, lineHeight }, index) => (
-          <div className={`flex w-1/7 flex-col items-center ${ml}`}>
+          <div key={index} className={`flex w-1/7 flex-col items-center ${ml}`}>
             <motion.div
-              key={index}
               initial={{ opacity: 0, scaleY: 0 }}
               whileInView={{ opacity: 1, scaleY: 1 }}
               viewport={{ once: true }}
