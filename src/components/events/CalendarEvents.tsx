@@ -65,22 +65,19 @@ const Events = () => {
                 <p className="text-4xl font-medium">{current.title}</p>
                 <p className="font-openSans my-2 flex flex-col gap-1 text-base">
                   <p>Location: {current.location}</p>
-                    Time:{" "}
-                    {new Date(current.start as string).toLocaleTimeString(
-                      "en-US",
-                      {
-                        hour: "2-digit",
-                        minute: "2-digit",
-                      },
-                    )}{" "}
-                    to{" "}
-                    {new Date(current.end as string).toLocaleTimeString(
-                      "en-US",
-                      {
-                        hour: "2-digit",
-                        minute: "2-digit",
-                      },
-                    )}
+                  Time:{" "}
+                  {new Date(current.start as string).toLocaleTimeString(
+                    "en-US",
+                    {
+                      hour: "2-digit",
+                      minute: "2-digit",
+                    },
+                  )}{" "}
+                  to{" "}
+                  {new Date(current.end as string).toLocaleTimeString("en-US", {
+                    hour: "2-digit",
+                    minute: "2-digit",
+                  })}
                 </p>
               </DialogTitle>
               <DialogDescription className="font-openSans relative text-black">

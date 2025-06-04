@@ -109,7 +109,7 @@ const Day = ({ date, displayMonth, events, setCurrent }: DayProps) => {
                 initial="hidden"
                 whileInView="show"
                 viewport={{ once: true, amount: 0.2 }}
-                className={`${isToday ? "bg-nsu-tan-100 text-nsu-gray-300" : "bg-nsu-tan-100 text-nsu-gray-300"} rounded-xl hover:bg-opacity-100 mb-0.5 flex w-full cursor-pointer p-1 text-center font-medium transition hover:opacity-60`}
+                className={`${isToday ? "bg-nsu-tan-100 text-nsu-gray-300" : "bg-nsu-tan-100 text-nsu-gray-300"} hover:bg-opacity-100 mb-0.5 flex w-full cursor-pointer rounded-xl p-1 text-center font-medium transition hover:opacity-60`}
                 key={index}
                 onClick={() =>
                   setCurrent({ title, start, end, location, description })
@@ -143,7 +143,7 @@ function Calendar({
         formatWeekdayName: (weekday) =>
           weekday.toLocaleString("en-US", { weekday: "short" }).toUpperCase(),
       }}
-      className={cn("m-auto w-full lg:scale-80 p-[2.55%] xl:w-4/5", className)}
+      className={cn("m-auto w-full p-[2.55%] lg:scale-80 xl:w-4/5", className)}
       classNames={{
         months: "flex flex-col sm:flex-row gap-2 w-full",
         month:
