@@ -32,8 +32,6 @@ type CarouselContextProps = {
 
 const CarouselContext = React.createContext<CarouselContextProps | null>(null);
 
-
-
 function useCarousel() {
   const context = React.useContext(CarouselContext);
 
@@ -75,7 +73,7 @@ function Carousel({
     const count = api.scrollSnapList().length;
 
     if (index === 0) {
-      api.scrollTo(count-1, true);
+      api.scrollTo(count - 1, true);
     } else {
       api.scrollPrev();
     }
