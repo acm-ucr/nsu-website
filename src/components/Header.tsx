@@ -6,18 +6,17 @@ import { motion } from "motion/react";
 
 const Header = ({ headerString }: { headerString: string }) => {
   return (
-    <div className="relative mt-10 mb-5 flex flex-col items-center justify-center">
+    <div className="relative mx-auto mt-10 mb-5 flex w-1/4 flex-col items-center justify-center">
       <motion.div
-        className="z-0 size-[50%] md:size-[25%]"
         initial={{ opacity: 0, y: -30 }}
         whileInView={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.5 }}
         viewport={{ once: true }}
       >
-        <Image src={fanImg} alt="fan image"></Image>
+        <Image src={fanImg} alt="fan image" className="z-0 w-full"></Image>
       </motion.div>
 
-      <svg viewBox="0 0 500 1" className="absolute z-1 h-full w-1/2 md:w-1/4">
+      <svg viewBox="0 0 500 1" className="absolute z-1 h-full w-full">
         <path
           id="curvedText"
           fill="none"
