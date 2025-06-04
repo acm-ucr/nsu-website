@@ -48,7 +48,6 @@ const Events = () => {
           title: summary,
         }),
       );
-      console.log("test");
       return events;
     },
   });
@@ -66,7 +65,6 @@ const Events = () => {
                 <p className="text-4xl font-medium">{current.title}</p>
                 <p className="font-openSans my-2 flex flex-col gap-1 text-base">
                   <p>Location: {current.location}</p>
-                  <p>
                     Time:{" "}
                     {new Date(current.start as string).toLocaleTimeString(
                       "en-US",
@@ -83,7 +81,6 @@ const Events = () => {
                         minute: "2-digit",
                       },
                     )}
-                  </p>
                 </p>
               </DialogTitle>
               <DialogDescription className="font-openSans relative text-black">

@@ -1,5 +1,6 @@
 import { Calendar } from "@/components/ui/calendar";
 import EventTypes from "@/components/events/EventTypes";
+import CalendarEvents from "@/components/events/CalendarEvents";
 import Header from "@/components/Header";
 
 const Page = () => {
@@ -7,7 +8,7 @@ const Page = () => {
     <div>
       <Header headerString="EVENTS" />
       <EventTypes />
-      <Calendar />
+      <CalendarEvents />
     </div>
   );
 };

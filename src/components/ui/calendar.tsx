@@ -85,7 +85,7 @@ const Day = ({ date, displayMonth, events, setCurrent }: DayProps) => {
       initial="hidden"
       whileInView="show"
       viewport={{ once: true, amount: 0.2 }}
-      className={`${isToday ? "bg-nsu-red-100 shadow-[inset_0_0_16px_rgba(0,0,0,0.5)]" : currentMonth ? "bg-transparent" : "bg-nsu-red-100 shadow-[inset_0_0_16px_rgba(0,0,0,0.5)]"} scrollbar-hidden flex h-28 h-full w-full flex-col overflow-y-scroll rounded-xl p-0.5`}
+      className={`${isToday ? "bg-nsu-red-100 shadow-[inset_0_0_16px_rgba(0,0,0,0.5)]" : currentMonth ? "bg-transparent" : "bg-nsu-red-100 shadow-[inset_0_0_16px_rgba(0,0,0,0.5)]"} scrollbar-hidden flex h-full w-full flex-col overflow-y-scroll rounded-xl p-0.5`}
     >
       <p
         className={`${currentMonth ? "" : "opacity-80"} ${isToday && "font-bold text-white"} text-fit sticky m-1 rounded-xl px-1 text-center md:text-left md:text-xl`}
@@ -109,13 +109,13 @@ const Day = ({ date, displayMonth, events, setCurrent }: DayProps) => {
                 initial="hidden"
                 whileInView="show"
                 viewport={{ once: true, amount: 0.2 }}
-                className={`${isToday ? "bg-nsu-red-200 text-nsu-gray-100" : "bg-nsu-tan-100 text-white"} hover:bg-opacity-100 mb-0.5 flex w-full cursor-pointer p-1 text-center font-medium transition hover:opacity-60`}
+                className={`${isToday ? "bg-nsu-tan-100 text-nsu-gray-300" : "bg-nsu-tan-100 text-nsu-gray-300"} rounded-xl hover:bg-opacity-100 mb-0.5 flex w-full cursor-pointer p-1 text-center font-medium transition hover:opacity-60`}
                 key={index}
                 onClick={() =>
                   setCurrent({ title, start, end, location, description })
                 }
               >
-                <span className="my-auto h-5 w-full truncate text-sm">
+                <span className="my-auto h-5 w-full overflow-clip text-xs md:text-base">
                   {title}
                 </span>
               </motion.div>
@@ -143,7 +143,7 @@ function Calendar({
         formatWeekdayName: (weekday) =>
           weekday.toLocaleString("en-US", { weekday: "short" }).toUpperCase(),
       }}
-      className={cn("m-auto w-full scale-80 p-[2.55%] xl:w-[80%]", className)}
+      className={cn("m-auto w-full lg:scale-80 p-[2.55%] xl:w-4/5", className)}
       classNames={{
         months: "flex flex-col sm:flex-row gap-2 w-full",
         month:
@@ -163,9 +163,9 @@ function Calendar({
         head_row: "flex",
         head_cell:
           "text-muted-foreground rounded-md w-full font-normal text-[0.5rem] md:text-lg lg:text-2xl xl:text-3xl text-white ",
-        row: "flex w-full justify-center",
+        row: "grid grid-cols-7 w-full justify-center",
         cell: cn(
-          "relative p-auto text-center text-sm hover:bg-nsu-red-100 focus-within:relative focus-within:z-20 [&:has([aria-selected])]:bg-accent [&:has([aria-selected].day-range-end)]:rounded-r-md w-full bg-nsu-red-200 rounded-sm lg:rounded-2xl border-1 md:2 lg:border-3 border-black aspect-square shadow-[inset_0_0_16px_rgba(0,0,0,0.5)]",
+          "relative p-auto text-center overflow-hidden text-sm hover:bg-nsu-red-100 focus-within:relative focus-within:z-20 [&:has([aria-selected])]:bg-accent [&:has([aria-selected].day-range-end)]:rounded-r-md w-full bg-nsu-red-200 rounded-sm lg:rounded-2xl border-1 md:2 lg:border-3 border-black aspect-square shadow-[inset_0_0_16px_rgba(0,0,0,0.5)]",
           props.mode === "range"
             ? "[&:has(>.day-range-end)]:rounded-r-md [&:has(>.day-range-start)]:rounded-l-md first:[&:has([aria-selected])]:rounded-l-md last:[&:has([aria-selected])]:rounded-r-md"
             : "[&:has([aria-selected])]:rounded-md",
