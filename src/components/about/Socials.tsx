@@ -3,6 +3,33 @@ import Link from "next/link";
 import { socialLanterns } from "@/data/Socials";
 import { motion } from "motion/react";
 
+
+const AnimateLanternStrings = (index: number) => ({
+  initial: { opacity: 0, scaleY: 0 },
+  whileInView: {
+    opacity: 1,
+    scaleY: 1,
+    transition: {
+      duration: 0.4,
+      delay: index * 0.1,
+      ease: "easeOut",
+    },
+  },
+});
+
+const AnimateLanterns = (index: number) => ({
+  initial: { opacity: 0, y: 30 },
+  whileInView: {
+    opacity: 1,
+    y: 0,
+    transition: {
+      duration: 0.5,
+      delay: index * 0.1 + 0.2,
+      ease: "easeOut",
+    },
+  },
+});
+
 const Socials = () => {
   return (
     <div className="my-16 flex w-full flex-col items-center md:scale-75">
@@ -15,27 +42,19 @@ const Socials = () => {
         {socialLanterns.map(({ icon, href, ml, lineHeight }, index) => (
           <div key={index} className={`flex w-1/7 flex-col items-center ${ml}`}>
             <motion.div
-              initial={{ opacity: 0, scaleY: 0 }}
-              whileInView={{ opacity: 1, scaleY: 1 }}
-              viewport={{ once: true }}
-              transition={{
-                duration: 0.4,
-                delay: index * 0.1,
-                ease: "easeOut",
-              }}
               style={{ originY: 0 }}
+              variants={AnimateLanternStrings(index)}
+              initial="initial"
+              whileInView="whileInView"
+              viewport={{ once: true }}
               className={`${lineHeight} border-r-4 lg:border-r-5 xl:border-r-6`}
             />
             <motion.div
-              initial={{ opacity: 0, y: 30 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
-              transition={{
-                duration: 0.5,
-                delay: index * 0.1 + 0.2,
-                ease: "easeOut",
-              }}
               className="flex w-full flex-col items-center"
+              variants={AnimateLanterns(index)}
+              initial="initial"
+              whileInView="whileInView"
+              viewport={{ once: true }}
             >
               <div className="border-nsu-red-200 -mb-0.5 h-1/35 w-1/3 rounded-full border-4 lg:-mb-1 lg:border-5" />
               <div className="border-nsu-red-200 flex aspect-square w-full items-center justify-center rounded-[2.5rem] border-4 lg:rounded-[3.5rem] lg:border-5 xl:rounded-[4.5rem]">
@@ -57,13 +76,11 @@ const Socials = () => {
       <div className="relative m-4 grid grid-cols-2 gap-12 md:hidden">
         {socialLanterns.map(({ icon, href }, index) => (
           <motion.div
-            initial={{ opacity: 0, y: 30 }}
-            whileInView={{ opacity: 1, y: 0 }}
+            key={index}
+            variants={AnimateLanterns(index)}
+            initial="initial"
+            whileInView="whileInView"
             viewport={{ once: true }}
-            transition={{
-              duration: 0.5,
-              delay: 0.1,
-            }}
           >
             <div key={index}>
               <Link
