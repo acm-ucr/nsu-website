@@ -6,7 +6,7 @@ import { motion } from "motion/react";
 
 const Header = ({ headerString }: { headerString: string }) => {
   return (
-    <div className="relative mt-10 mb-5 flex flex-col items-center justify-center w-1/4 mx-auto">
+    <div className="relative mx-auto mt-10 mb-5 flex w-1/4 flex-col items-center justify-center">
       <motion.div
         initial={{ opacity: 0, y: -30 }}
         whileInView={{ opacity: 1, y: 0 }}
