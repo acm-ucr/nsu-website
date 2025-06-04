@@ -32,6 +32,8 @@ type CarouselContextProps = {
 
 const CarouselContext = React.createContext<CarouselContextProps | null>(null);
 
+
+
 function useCarousel() {
   const context = React.useContext(CarouselContext);
 
@@ -68,11 +70,27 @@ function Carousel({
   }, []);
 
   const scrollPrev = React.useCallback(() => {
-    api?.scrollPrev();
+    if (!api) return;
+    const index = api.selectedScrollSnap();
+    const count = api.scrollSnapList().length;
+
+    if (index === 0) {
+      api.scrollTo(count-1, true);
+    } else {
+      api.scrollPrev();
+    }
   }, [api]);
 
   const scrollNext = React.useCallback(() => {
-    api?.scrollNext();
+    if (!api) return;
+    const index = api.selectedScrollSnap();
+    const count = api.scrollSnapList().length;
+
+    if (index === count - 1) {
+      api.scrollTo(0, true);
+    } else {
+      api.scrollNext();
+    }
   }, [api]);
 
   const handleKeyDown = React.useCallback(
@@ -138,7 +156,7 @@ function CarouselContent({ className, ...props }: React.ComponentProps<"div">) {
   return (
     <div
       ref={carouselRef}
-      className="overflow-hidden"
+      className="overflow-x-clip"
       data-slot="carousel-content"
     >
       <div
