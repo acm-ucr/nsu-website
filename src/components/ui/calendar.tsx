@@ -8,7 +8,6 @@ import { cn } from "@/lib/utils";
 import { buttonVariants } from "@/components/ui/button";
 import * as motion from "motion/react-client";
 
-
 const slideUp = {
   hidden: { opacity: 0, y: 5 },
   show: {
@@ -26,7 +25,6 @@ const slideDown = {
 const transition = {
   duration: 0.3,
 };
-
 
 export type GoogleEventProps = {
   start: {
@@ -52,7 +50,6 @@ export type CalendarProps = React.ComponentProps<typeof DayPicker> & {
   events: EventProps[];
   setCurrent: (props: EventProps) => void;
 };
-
 
 interface DayProps {
   date: Date;
@@ -88,10 +85,10 @@ const Day = ({ date, displayMonth, events, setCurrent }: DayProps) => {
       initial="hidden"
       whileInView="show"
       viewport={{ once: true, amount: 0.2 }}
-      className={`${isToday ? "bg-nsu-red-100 shadow-[inset_0_0_16px_rgba(0,0,0,0.5)]" : currentMonth ? "bg-transparent" : "bg-nsu-red-100 shadow-[inset_0_0_16px_rgba(0,0,0,0.5)]"}  h-full rounded-xl scrollbar-hidden flex h-28 w-full flex-col overflow-y-scroll p-0.5`}
+      className={`${isToday ? "bg-nsu-red-100 shadow-[inset_0_0_16px_rgba(0,0,0,0.5)]" : currentMonth ? "bg-transparent" : "bg-nsu-red-100 shadow-[inset_0_0_16px_rgba(0,0,0,0.5)]"} scrollbar-hidden flex h-28 h-full w-full flex-col overflow-y-scroll rounded-xl p-0.5`}
     >
       <p
-        className={`${currentMonth ? "" : "opacity-80"} ${isToday && "font-bold text-white"} rounded-xl text-fit sticky m-1 px-1 text-center md:text-left md:text-xl`}
+        className={`${currentMonth ? "" : "opacity-80"} ${isToday && "font-bold text-white"} text-fit sticky m-1 rounded-xl px-1 text-center md:text-left md:text-xl`}
       >
         {date.getDate()}
       </p>
@@ -112,7 +109,7 @@ const Day = ({ date, displayMonth, events, setCurrent }: DayProps) => {
                 initial="hidden"
                 whileInView="show"
                 viewport={{ once: true, amount: 0.2 }}
-                className={`${isToday ? "bg-nsu-red-200 text-nsu-gray-100" : "bg-nsu-tan-100 text-white"} mb-0.5 flex w-full cursor-pointer p-1 text-center font-medium transition hover:bg-opacity-100 hover:opacity-60`}
+                className={`${isToday ? "bg-nsu-red-200 text-nsu-gray-100" : "bg-nsu-tan-100 text-white"} hover:bg-opacity-100 mb-0.5 flex w-full cursor-pointer p-1 text-center font-medium transition hover:opacity-60`}
                 key={index}
                 onClick={() =>
                   setCurrent({ title, start, end, location, description })
@@ -130,7 +127,6 @@ const Day = ({ date, displayMonth, events, setCurrent }: DayProps) => {
   );
 };
 
-
 function Calendar({
   className,
   classNames,
@@ -147,7 +143,7 @@ function Calendar({
         formatWeekdayName: (weekday) =>
           weekday.toLocaleString("en-US", { weekday: "short" }).toUpperCase(),
       }}
-      className={cn("m-auto w-full p-[2.55%] xl:w-[80%] scale-80", className)}
+      className={cn("m-auto w-full scale-80 p-[2.55%] xl:w-[80%]", className)}
       classNames={{
         months: "flex flex-col sm:flex-row gap-2 w-full",
         month:

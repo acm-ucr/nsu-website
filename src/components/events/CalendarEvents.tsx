@@ -37,7 +37,7 @@ const Events = () => {
             timeMin,
           )}&timeMax=${encodeURIComponent(timeMax)}`).then((res) => res.json());
 
-        console.log("Raw Google Calendar API response:", response);
+      console.log("Raw Google Calendar API response:", response);
 
       const events = response.items.map(
         ({ start, end, location, description, summary }: GoogleEventProps) => ({
@@ -60,11 +60,11 @@ const Events = () => {
           open={Object.keys(current).length > 0}
           onOpenChange={() => setCurrent({})}
         >
-          <DialogContent className="border-4 border-hsa-blue-100 p-8">
+          <DialogContent className="border-hsa-blue-100 border-4 p-8">
             <DialogHeader>
               <DialogTitle>
                 <p className="text-4xl font-medium">{current.title}</p>
-                <p className="my-2 flex flex-col gap-1 font-openSans text-base">
+                <p className="font-openSans my-2 flex flex-col gap-1 text-base">
                   <p>Location: {current.location}</p>
                   <p>
                     Time:{" "}
@@ -86,14 +86,14 @@ const Events = () => {
                   </p>
                 </p>
               </DialogTitle>
-              <DialogDescription className="relative font-openSans text-black">
+              <DialogDescription className="font-openSans relative text-black">
                 {current.description}
               </DialogDescription>
             </DialogHeader>
           </DialogContent>
         </Dialog>
       )}
-      <div className="mx-auto my-4 flex w-full bg-hsa-tan-200 pb-12 pt-4">
+      <div className="bg-hsa-tan-200 mx-auto my-4 flex w-full pt-4 pb-12">
         <Calendar
           mode="single"
           selected={new Date()}
