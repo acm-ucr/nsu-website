@@ -28,7 +28,7 @@ const Landing = () => {
                 </h1>
                 <h1 className="text-nsu-red-200 relative z-10">Nikkei</h1>
               </div>
-              <div className="ml-15 ml-[22vw] text-4xl font-extrabold md:text-6xl lg:text-8xl">
+              <div className="ml-[22vw] text-4xl font-extrabold md:text-6xl lg:text-8xl">
                 <h1
                   className="text-nsu-tan-100 absolute z-0 mt-[2px] ml-[2px] lg:mt-1 lg:ml-1"
                   style={{ WebkitTextStroke: "1px #70161e" }}
@@ -37,7 +37,7 @@ const Landing = () => {
                 </h1>
                 <h1 className="text-nsu-red-200 relative z-10">Student</h1>
               </div>
-              <div className="ml-35 ml-[37vw] text-4xl font-extrabold md:text-6xl lg:text-8xl">
+              <div className="ml-[37vw] text-4xl font-extrabold md:text-6xl lg:text-8xl">
                 <h1
                   className="text-nsu-tan-100 absolute z-0 mt-[2px] ml-[2px] lg:mt-1 lg:ml-1"
                   style={{ WebkitTextStroke: "1px #70161e" }}
