@@ -57,6 +57,7 @@ const Socials = () => {
       <div className="relative m-4 grid grid-cols-2 gap-12 md:hidden">
         {socialLanterns.map(({ icon, href }, index) => (
           <motion.div
+            key={index}
             initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
@@ -65,7 +66,7 @@ const Socials = () => {
               delay: 0.1,
             }}
           >
-            <div key={index}>
+            <div>
               <Link
                 className="text-nsu-red-300 flex items-center duration-150 hover:scale-110"
                 href={href}
