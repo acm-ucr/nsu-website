@@ -13,8 +13,9 @@ const Socials = () => {
       {/*Desktop*/}
       <div className="relative hidden h-110 w-[90%] flex-wrap justify-center md:flex lg:h-150 lg:w-[80%]">
         {socialLanterns.map(({ icon, href, ml, lineHeight }, index) => (
-          <div key={index} className={`flex w-1/7 flex-col items-center ${ml}`}>
+          <div className={`flex w-1/7 flex-col items-center ${ml}`}>
             <motion.div
+              key={index}
               initial={{ opacity: 0, scaleY: 0 }}
               whileInView={{ opacity: 1, scaleY: 1 }}
               viewport={{ once: true }}
@@ -57,6 +58,7 @@ const Socials = () => {
       <div className="relative m-4 grid grid-cols-2 gap-12 md:hidden">
         {socialLanterns.map(({ icon, href }, index) => (
           <motion.div
+            key={index}
             initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
@@ -65,7 +67,7 @@ const Socials = () => {
               delay: 0.1,
             }}
           >
-            <div key={index}>
+            <div>
               <Link
                 className="text-nsu-red-300 flex items-center duration-150 hover:scale-110"
                 href={href}
