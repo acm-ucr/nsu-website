@@ -37,25 +37,25 @@ const Footer: React.FC = () => {
 
             <div className="mt-3 flex justify-center space-x-4 md:justify-end">
               <Link href="/" target="_blank" aria-label="Discord">
-                <FaDiscord className="h-8 w-8" />
+                <FaDiscord className="h-8 w-8 transform transition-transform duration-200 hover:scale-110" />
               </Link>
               <Link href="/" target="_blank" aria-label="TikTok">
-                <FaTiktok className="h-8 w-8" />
+                <FaTiktok className="h-8 w-8 transform transition-transform duration-200 hover:scale-110" />
               </Link>
               <Link href="/" target="_blank" aria-label="Instagram">
-                <FaInstagram className="h-8 w-8" />
+                <FaInstagram className="h-8 w-8 transform transition-transform duration-200 hover:scale-110" />
               </Link>
               <Link href="/" target="_blank" aria-label="YouTube">
-                <FaYoutube className="h-8 w-8" />
+                <FaYoutube className="h-8 w-8 transform transition-transform duration-200 hover:scale-110" />
               </Link>
               <Link href="/" target="_blank" aria-label="Linktree">
-                <SiLinktree className="h-8 w-8" />
+                <SiLinktree className="h-8 w-8 transform transition-transform duration-200 hover:scale-110" />
               </Link>
               <Link href="/" target="_blank" aria-label="LinkedIn">
-                <FaLinkedinIn className="h-8 w-8" />
+                <FaLinkedinIn className="h-8 w-8 transform transition-transform duration-200 hover:scale-110" />
               </Link>
               <Link href="mailto:someone@example.com" aria-label="Email">
-                <FiMail className="h-8 w-8" />
+                <FiMail className="h-8 w-8 transform transition-transform duration-200 hover:scale-110" />
               </Link>
             </div>
           </div>
