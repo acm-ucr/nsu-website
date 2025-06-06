@@ -1,10 +1,10 @@
 "use client";
 
-import Landing from "@/components/home/Landing";
-import Welcome from "@/components/home/Welcome";
-import Offer from "@/components/home/Offer";
-import AdditionalInfo from "@/components/home/AdditionalInfo";
-import JoinUsButton from "@/components/home/JoinUsButton";
+import Landing from "@/components/home_temp/Landing";
+import Welcome from "@/components/home_temp/Welcome";
+import Offer from "@/components/home_temp/Offer";
+import AdditionalInfo from "@/components/home_temp/AdditionalInfo";
+import JoinUsButton from "@/components/home_temp/JoinUsButton";
 import { motion } from "motion/react";
 
 const Home = () => {
