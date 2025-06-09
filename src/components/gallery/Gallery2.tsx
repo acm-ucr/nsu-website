@@ -1,6 +1,7 @@
 "use client";
 
 import { motion } from "motion/react";
+import Image from "next/image";
 
 const gallery = [
   "/photos/CIMG1842.webp",
@@ -100,11 +101,13 @@ const Gallery2 = () => {
                     initial="initial"
                     whileInView="whileInView"
                     viewport={{ once: true }}
+                    className="relative aspect-square"
                   >
-                    <img
+                    <Image
                       src={src}
                       alt={`Gallery image ${globalIndex + 1}`}
-                      className="aspect-square object-cover"
+                      fill
+                      className="object-cover"
                     />
                   </motion.div>
                 );
