@@ -1,6 +1,7 @@
 "use client";
 
 import { motion } from "motion/react";
+import Image from "next/image";
 
 const gallery = [
   "/photos/CIMG1842.webp",
@@ -49,6 +50,21 @@ const Gallery2 = () => {
   const imagesPerRow = 4;
   const rows = Math.ceil(gallery.length / imagesPerRow);
 
+  const AnimateGallery = (isEvenRow: boolean, index: number) => ({
+    initial: {
+      opacity: 0,
+      x: isEvenRow ? 30 : -30,
+    },
+    whileInView: {
+      opacity: 1,
+      x: 0,
+      transition: {
+        duration: 0.5,
+        delay: index * 0.1,
+      },
+    },
+  });
+
   return (
     <div>
       <div className="flex flex-col items-center justify-center md:ml-20 md:items-start">
@@ -57,37 +73,48 @@ const Gallery2 = () => {
         </div>
         <div className="bg-nsu-red-200 mx-auto my-2 h-[4px] w-7/10 md:mx-0 md:w-3/5"></div>
       </div>
+
       <div className="mt-5 mb-5">
-        {[...Array(rows)].map((_, rowIdx) => (
-          <div
-            key={rowIdx}
-            className={`mb-1 grid grid-cols-4 gap-1 md:mb-3 md:gap-3 ${rowIdx % 2 !== 0 ? "ml-5 md:ml-15" : "mr-5 md:mr-15"}`}
-          >
-            {gallery
-              .slice(
-                rowIdx * imagesPerRow,
-                rowIdx * imagesPerRow + imagesPerRow,
-              )
-              .map((src, i) => (
-                <motion.div
-                  key={rowIdx * imagesPerRow + i}
-                  initial={{ opacity: 0, x: rowIdx % 2 === 0 ? 30 : -30 }}
-                  whileInView={{ opacity: 1, x: 0 }}
-                  viewport={{ once: true }}
-                  transition={{
-                    duration: 0.5,
-                    delay: (rowIdx * imagesPerRow + i) * 0.1,
-                  }}
-                >
-                  <img
-                    src={src}
-                    alt={`Gallery image ${rowIdx * imagesPerRow + i + 1}`}
-                    className="aspect-square object-cover"
-                  />
-                </motion.div>
-              ))}
-          </div>
-        ))}
+        {[...Array(rows)].map((_, rowIdx) => {
+          const isEvenRow = rowIdx % 2 === 0;
+          const rowImages = gallery.slice(
+            rowIdx * imagesPerRow,
+            rowIdx * imagesPerRow + imagesPerRow,
+          );
+
+          return (
+            <div
+              key={rowIdx}
+              className={`mb-1 grid grid-cols-4 gap-1 md:mb-3 md:gap-3 ${isEvenRow ? "mr-5 md:mr-15" : "ml-5 md:ml-15"}`}
+            >
+              {rowImages.map((src, i) => {
+                const globalIndex = rowIdx * imagesPerRow + i;
+                const animationVariants = AnimateGallery(
+                  isEvenRow,
+                  globalIndex,
+                );
+
+                return (
+                  <motion.div
+                    key={globalIndex}
+                    variants={animationVariants}
+                    initial="initial"
+                    whileInView="whileInView"
+                    viewport={{ once: true }}
+                    className="relative aspect-square"
+                  >
+                    <Image
+                      src={src}
+                      alt={`Gallery image ${globalIndex + 1}`}
+                      fill
+                      className="object-cover"
+                    />
+                  </motion.div>
+                );
+              })}
+            </div>
+          );
+        })}
       </div>
     </div>
   );
