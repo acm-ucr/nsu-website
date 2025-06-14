@@ -1,11 +1,13 @@
 import BoardGrid from "@/components/board/BoardGrid";
 import Header from "@/components/Header";
 
-export default function Page() {
+const Page = () => {
   return (
-    <div>
+    <>
       <Header headerString="BOARD" />
       <BoardGrid />
-    </div>
+    </>
   );
-}
+};
+
+export default Page;
