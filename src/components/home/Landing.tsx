@@ -5,6 +5,31 @@ import Lanterns from "@/public/assets/lanterns.webp";
 import { motion } from "motion/react";
 
 const Landing = () => {
+  // const titleAnimation = {
+  //   initial: { opacity: 0, x: -30 },
+  //   transition: { duration: 0.8 },
+  //   whileInView: { opacity: 100, x: 0 },
+  //   viewport: { once: true },
+  // };
+
+  const lanternAnimation = {
+    initial: { y: -600 },
+    transition: {
+      duration: 0.8,
+      delay: 0.5,
+      type: "spring",
+      damping: 20,
+    },
+    animate: { y: 0 },
+    viewport: { once: true },
+  } as const;
+
+  const textAnimation = {
+    initial: { y: 30, opacity: 0 },
+    whileInView: { y: 0, opacity: 100 },
+    viewport: { once: true },
+  };
+
   return (
     <div className="flex w-full flex-col justify-center">
       <div className="flex flex-row">
@@ -51,17 +76,7 @@ const Landing = () => {
         </div>
 
         <div className="z-[-5] flex flex-[3]">
-          <motion.div
-            initial={{ y: -600 }}
-            transition={{
-              duration: 0.8,
-              delay: 0.5,
-              type: "spring",
-              damping: 20,
-            }}
-            animate={{ y: 0 }}
-            viewport={{ once: true }}
-          >
+          <motion.div {...lanternAnimation}>
             <Image
               src={Lanterns}
               alt="NSU Lanterns"
@@ -70,11 +85,7 @@ const Landing = () => {
           </motion.div>
         </div>
       </div>
-      <motion.div
-        initial={{ y: 30, opacity: 0 }}
-        whileInView={{ y: 0, opacity: 100 }}
-        viewport={{ once: true }}
-      >
+      <motion.div {...textAnimation}>
         <div className="text-nsu-black-100 border-nsu-red-200 mx-[6vw] mb-5 border-b-4 py-2 text-center text-[0.80rem] md:mt-5 md:text-[1.50rem] lg:ml-20 lg:w-9/16 xl:text-[1.68rem]">
           NSU is a diverse Japanese socio-cultural club at UCR.
         </div>
