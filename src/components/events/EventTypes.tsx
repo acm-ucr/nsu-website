@@ -30,8 +30,8 @@ interface EventData {
   title: string;
   season: string;
   description: string;
-  mainImage: any;
-  clipartImage: any;
+  mainImage: { src: string; height: number; width: number };
+  clipartImage: { src: string; height: number; width: number };
   clipartClasses: string;
   isReversed: boolean;
 }
