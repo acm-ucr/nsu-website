@@ -32,7 +32,7 @@ const EventTypes = () => {
             <Image
               src={DangoImg}
               alt="Dango Clipart"
-              className="absolute top-0 right-0 hidden w-[100px] translate-x-12 -translate-y-16 md:flex md:w-[150px] lg:flex lg:translate-x-16 lg:-translate-y-20 xl:flex xl:w-[220px] xl:translate-x-18 xl:-translate-y-30"
+              className="absolute top-0 right-0 hidden w-[100px] -translate-y-16 translate-x-12 md:flex md:w-[150px] lg:flex lg:-translate-y-20 lg:translate-x-16 xl:flex xl:w-[220px] xl:-translate-y-30 xl:translate-x-18"
             />
           </div>
         </div>
@@ -97,7 +97,7 @@ const EventTypes = () => {
           <Image
             src={RamenImg}
             alt="Ramen Clipart"
-            className="absolute top-0 right-0 hidden w-[100px] -translate-x-8 -translate-y-16 md:flex md:w-[150px] lg:flex lg:translate-x-4 lg:-translate-y-20 xl:flex xl:w-[220px] xl:-translate-x-12 xl:-translate-y-30"
+            className="absolute top-0 right-0 hidden w-[100px] -translate-x-8 -translate-y-16 md:flex md:w-[150px] lg:flex lg:-translate-y-20 lg:translate-x-4 xl:flex xl:w-[220px] xl:-translate-x-12 xl:-translate-y-30"
           />
         </div>
 
@@ -129,7 +129,7 @@ const EventTypes = () => {
             <Image
               src={OnigiriImg}
               alt="Onigiri Clipart"
-              className="absolute top-0 right-0 hidden w-[100px] translate-x-6 -translate-y-8 scale-x-[-1] rotate-25 md:flex md:w-[150px] lg:flex lg:translate-x-11 lg:-translate-y-10 xl:flex xl:w-[200px] xl:-translate-y-15"
+              className="absolute top-0 right-0 hidden w-[100px] -translate-y-8 translate-x-6 scale-x-[-1] rotate-25 md:flex md:w-[150px] lg:flex lg:-translate-y-10 lg:translate-x-11 xl:flex xl:w-[200px] xl:-translate-y-15"
             />
           </div>
         </div>
@@ -194,7 +194,7 @@ const EventTypes = () => {
           <Image
             src={TaiyakiImg}
             alt="Taiyaki Clipart"
-            className="absolute top-0 right-0 hidden w-[100px] -translate-x-8 -translate-y-16 rotate-50 md:flex md:w-[150px] lg:flex lg:translate-x-4 lg:-translate-y-20 xl:flex xl:w-[220px] xl:-translate-x-12 xl:-translate-y-30"
+            className="absolute top-0 right-0 hidden w-[100px] -translate-x-8 -translate-y-16 rotate-50 md:flex md:w-[150px] lg:flex lg:-translate-y-20 lg:translate-x-4 xl:flex xl:w-[220px] xl:-translate-x-12 xl:-translate-y-30"
           />
         </div>
 
