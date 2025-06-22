@@ -22,7 +22,7 @@ const Landing = () => {
     },
     animate: { y: 0 },
     viewport: { once: true },
-  };
+  } as const;
 
   const textAnimation = {
     initial: { y: 30, opacity: 0 },
