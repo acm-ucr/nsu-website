@@ -4,11 +4,11 @@ import Header from "@/components/Header";
 
 const Page = () => {
   return (
-    <div>
+    <>
       <Header headerString="GALLERY" />
       <Gallery1 />
       <Gallery2 />
-    </div>
+    </>
   );
 };
 
