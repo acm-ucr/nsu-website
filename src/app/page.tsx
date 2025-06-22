@@ -13,16 +13,8 @@ const Home = () => {
       <Landing />
       <Welcome />
       <Offer />
-      <JoinUsButton />
-      <motion.div
-        initial={{ opacity: 0 }}
-        whileInView={{ opacity: 100 }}
-        transition={{ duration: 0.5 }}
-        viewport={{ once: true }}
-        className="flex w-full flex-col items-center justify-center"
-      >
-        <AdditionalInfo />
-      </motion.div>
+      <JoinUsButton />      
+      <AdditionalInfo />
     </div>
   );
 };

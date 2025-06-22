@@ -1,10 +1,21 @@
+"use client";
 import Image from "next/image";
-import AboutImg2 from "../../../public/about/about2.webp";
+import { motion } from "motion/react";
+import AboutImg2 from "@/public/about/about2.webp";
+
+const fadeFromLeft = {
+  initial: { opacity: 0, x: -50 },
+  whileInView: { opacity: 1, x: 0 },
+  viewport: { once: true },
+  transition: { duration: 0.9, delay: 0.3 },
+};
 
 const AboutSection1 = () => {
   return (
-    // add px-4 on mobile, reset at md
-    <div className="px-4 md:px-6">
+    <motion.div 
+      className="px-4 md:px-6"
+      {...fadeFromLeft}
+    >
       <div className="bg-nsu-red-200 mx-auto my-2 h-[4px] w-full md:w-1/2" />
       <div>
         <p className="font-nsu-main text-nsu-gray-300 mt-5 w-full text-center text-xl leading-7 tracking-normal md:w-3/4 md:text-left md:text-3xl md:leading-9">
@@ -29,7 +40,7 @@ const AboutSection1 = () => {
           />
         </div>
       </div>
-    </div>
+    </motion.div>
   );
 };
 

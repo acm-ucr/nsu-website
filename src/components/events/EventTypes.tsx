@@ -2,14 +2,14 @@
 import React from "react";
 import Image from "next/image";
 import { motion } from "motion/react";
-import DangoImg from "../../../public/events/tanghulu.webp";
-import BigLittle from "../../../public/events/reveal.webp";
-import RamenImg from "../../../public/events/ramen.webp";
-import RetreatImg from "../../../public/events/winter_retreat.webp";
-import OnigiriImg from "../../../public/events/onigiri.webp";
-import CultureNightImg from "../../../public/events/culture_night.webp";
-import TaiyakiImg from "../../../public/events/taiyaki.webp";
-import BanquetImg from "../../../public/events/banquet.webp";
+import DangoImg from "@/public/events/tanghulu.webp";
+import BigLittle from "@/public/events/reveal.webp";
+import RamenImg from "@/public/events/ramen.webp";
+import RetreatImg from "@/public/events/winter_retreat.webp";
+import OnigiriImg from "@/public/events/onigiri.webp";
+import CultureNightImg from "@/public/events/culture_night.webp";
+import TaiyakiImg from "@/public/events/taiyaki.webp";
+import BanquetImg from "@/public/events/banquet.webp";
 
 const fadeFromLeft = {
   initial: { opacity: 0, x: -50 },
@@ -94,7 +94,6 @@ const EventTypes = () => {
       event.isReversed ? "py-8 md:py-32" : ""
     } lg:grid-cols-2 ${isLastEvent ? "" : "mb-8"}`;
 
-    // Use fadeFromLeft for 1st and 3rd events (index 0, 2), fadeFromRight for 2nd and 4th events (index 1, 3)
     const animationProps = index % 2 === 0 ? fadeFromLeft : fadeFromRight;
 
     if (event.isReversed) {
