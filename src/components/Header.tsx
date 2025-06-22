@@ -6,7 +6,7 @@ import { motion } from "motion/react";
 
 const Header = ({ headerString }: { headerString: string }) => {
   return (
-    <div className="relative z-100 mx-auto mt-10 mb-5 flex w-1/4 flex-col items-center justify-center overflow-visible">
+    <div className="relative z-100 mx-auto mt-10 mb-5 flex w-1/2 flex-col items-center justify-center overflow-visible sm:w-1/3 md:w-1/4">
       <motion.div
         className="z-99 size-[50%] md:size-[25%]"
         initial={{ opacity: 0, y: -30 }}
@@ -31,7 +31,7 @@ const Header = ({ headerString }: { headerString: string }) => {
         />
         <text
           key=""
-          className="fill-[#70161e] text-[90px] font-bold [letter-spacing:5px]"
+          className="fill-[#70161e] text-8xl font-bold [letter-spacing:2px] md:[letter-spacing:5px] lg:text-8xl xl:text-[80px]"
         >
           <motion.textPath
             style={{ textAnchor: "middle" }}
