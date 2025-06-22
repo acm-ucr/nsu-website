@@ -36,10 +36,7 @@ const Offer = () => {
       </motion.div>
       <ul className="flex list-disc flex-col gap-5 font-[urbanist]">
         {offers.map((text, i) => (
-          <motion.li
-            key={i}
-            {...listFade}
-          >
+          <motion.li key={i} {...listFade}>
             {text}
           </motion.li>
         ))}
