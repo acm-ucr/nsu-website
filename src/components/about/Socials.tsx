@@ -46,7 +46,7 @@ const Socials = () => {
               initial="initial"
               whileInView="whileInView"
               viewport={{ once: true }}
-              className={`${lineHeight} border-r-4 lg:border-r-5 xl:border-r-6 border-nsu-red-300`}
+              className={`${lineHeight} border-nsu-red-300 border-r-4 lg:border-r-5 xl:border-r-6`}
             />
             <motion.div
               className="flex w-full flex-col items-center"
