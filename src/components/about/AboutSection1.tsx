@@ -12,10 +12,7 @@ const fadeFromLeft = {
 
 const AboutSection1 = () => {
   return (
-    <motion.div 
-      className="px-4 md:px-6"
-      {...fadeFromLeft}
-    >
+    <motion.div className="px-4 md:px-6" {...fadeFromLeft}>
       <div className="bg-nsu-red-200 mx-auto my-2 h-[4px] w-full md:w-1/2" />
       <div>
         <p className="font-nsu-main text-nsu-gray-300 mt-5 w-full text-center text-xl leading-7 tracking-normal md:w-3/4 md:text-left md:text-3xl md:leading-9">

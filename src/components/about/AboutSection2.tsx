@@ -6,7 +6,6 @@ import BlackFish from "@/public/assets/nsu12.webp";
 import Tree from "@/public/assets/nsu5.webp";
 import { motion } from "motion/react";
 
-
 const fadeFromRight = {
   initial: { opacity: 0, x: 50 },
   whileInView: { opacity: 1, x: 0 },
@@ -14,12 +13,11 @@ const fadeFromRight = {
   transition: { duration: 0.9, delay: 0.3 },
 };
 
-
 const AboutSection2 = () => {
   return (
     <div className="px-4 md:px-0">
       <div className="bg-nsu-red-200 mx-auto my-2 mt-10 h-[4px] w-full md:w-1/2" />
-      <motion.div 
+      <motion.div
         className="bg-nsu-tan-100 relative flex flex-col items-start overflow-hidden p-4 md:p-8"
         {...fadeFromRight}
       >
@@ -54,7 +52,11 @@ const AboutSection2 = () => {
 
         <div className="absolute -right-8 mt-4 hidden md:-right-30 md:mt-20 md:block">
           <Image src={Tree} alt="Tree" className="w-4/5" />
-          <Image src={Tree} alt="Tree" className="absolute -right-4 mt-80 w-3/5 rotate-300 md:-right-40" />
+          <Image
+            src={Tree}
+            alt="Tree"
+            className="absolute -right-4 mt-80 w-3/5 rotate-300 md:-right-40"
+          />
         </div>
       </motion.div>
     </div>

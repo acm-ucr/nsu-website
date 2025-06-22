@@ -13,7 +13,7 @@ const Home = () => {
       <Landing />
       <Welcome />
       <Offer />
-      <JoinUsButton />      
+      <JoinUsButton />
       <AdditionalInfo />
     </div>
   );
