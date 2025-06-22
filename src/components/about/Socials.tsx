@@ -1,7 +1,7 @@
 "use client";
 import Link from "next/link";
 import { socialLanterns } from "@/data/Socials";
-import { motion } from "motion/react";
+import { motion, easeOut } from "motion/react";
 
 const AnimateLanternStrings = (index: number) => ({
   initial: { opacity: 0, scaleY: 0 },
@@ -11,7 +11,7 @@ const AnimateLanternStrings = (index: number) => ({
     transition: {
       duration: 0.4,
       delay: index * 0.1,
-      ease: "easeOut",
+      ease: easeOut,
     },
   },
 });
@@ -24,7 +24,7 @@ const AnimateLanterns = (index: number) => ({
     transition: {
       duration: 0.5,
       delay: index * 0.1 + 0.2,
-      ease: "easeOut",
+      ease: easeOut,
     },
   },
 });
@@ -46,7 +46,7 @@ const Socials = () => {
               initial="initial"
               whileInView="whileInView"
               viewport={{ once: true }}
-              className={`${lineHeight} border-r-4 lg:border-r-5 xl:border-r-6`}
+              className={`${lineHeight} border-r-4 lg:border-r-5 xl:border-r-6 border-nsu-red-300`}
             />
             <motion.div
               className="flex w-full flex-col items-center"
