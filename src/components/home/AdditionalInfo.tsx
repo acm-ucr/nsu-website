@@ -24,6 +24,18 @@ const AdditionalInfo = () => {
     viewport: { once: true },
   };
 
+  const items = [
+    {
+      question: "How often does your student organizaton meet?",
+      answer: "Every two weeks",
+    },
+    {
+      question:
+        "What day and time does your student organization generally meet?",
+      answer: "Thursday 8:00 PM",
+    },
+  ];
+
   return (
     <div className="my-8 flex w-3/4 flex-col items-center xl:w-1/2">
       <motion.p
@@ -38,31 +50,22 @@ const AdditionalInfo = () => {
         {...fadeInRight}
         className="bg-nsu-red-300 text-nsu-gray-100 flex flex-col items-center justify-center rounded-3xl p-4 shadow-[12px_12px_0px_rgba(59,37,44,0.4)] md:w-9/10 lg:p-12"
       >
-        <motion.p
-          {...delayWords}
-          className="font-urbanist mb-2 w-4/5 text-center text-sm md:text-lg lg:mb-6 lg:text-2xl"
-        >
-          How often does your student organizaton meet?
-        </motion.p>
-        <motion.p
-          {...delayWords}
-          className="md:text-md font-urbanist mb-6 text-center text-xs lg:text-xl"
-        >
-          Every two weeks
-        </motion.p>
-
-        <motion.p
-          {...delayWords}
-          className="font-urbanist mb-2 w-4/5 text-center text-sm md:text-lg lg:mb-6 lg:text-2xl"
-        >
-          What day and time does your student organization generally meet?
-        </motion.p>
-        <motion.p
-          {...delayWords}
-          className="md:text-md font-urbanist text-center text-xs lg:text-xl"
-        >
-          Thursday 8:00 PM
-        </motion.p>
+        {items.map((item, i) => (
+          <motion.div key={i} className="flex w-full flex-col items-center">
+            <motion.p
+              {...fadeInRight}
+              className="text-nsu-gray-100 font-urbanist mb-2 w-[80%] text-center text-sm md:text-lg lg:mb-6 lg:text-2xl"
+            >
+              {item.question}
+            </motion.p>
+            <motion.p
+              {...delayWords}
+              className="text-nsu-gray-100 md:text-md font-urbanist mb-6 text-center text-xs lg:text-xl"
+            >
+              {item.answer}
+            </motion.p>
+          </motion.div>
+        ))}
       </motion.div>
     </div>
   );
