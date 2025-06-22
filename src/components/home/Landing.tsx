@@ -5,12 +5,12 @@ import Lanterns from "@/public/assets/lanterns.webp";
 import { motion } from "motion/react";
 
 const Landing = () => {
-  const titleAnimation = {
-    initial: { opacity: 0, x: -30 },
-    transition: { duration: 0.8 },
-    whileInView: { opacity: 100, x: 0 },
-    viewport: { once: true },
-  };
+  // const titleAnimation = {
+  //   initial: { opacity: 0, x: -30 },
+  //   transition: { duration: 0.8 },
+  //   whileInView: { opacity: 100, x: 0 },
+  //   viewport: { once: true },
+  // };
 
   const lanternAnimation = {
     initial: { y: -600 },
