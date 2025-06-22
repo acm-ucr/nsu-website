@@ -12,7 +12,7 @@ import {
 import { SiLinktree } from "react-icons/si";
 import { FiMail } from "react-icons/fi";
 
-const Footer: React.FC = () => {
+const Footer = () => {
   return (
     <footer className="relative w-full">
       <div className="h-55 w-full bg-[url('/assets/footer.svg')] bg-[length:450px] bg-clip-content bg-top bg-repeat-x contrast-150 [-ms-interpolation-mode:nearest-neighbor] [image-rendering:crisp-edges]" />
