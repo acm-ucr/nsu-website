@@ -38,35 +38,39 @@ const Landing = () => {
             <Image src={Umbrella} alt="NSU Umbrella" />
           </div>
           <motion.div
-            {...titleAnimation}
-            className="flex flex-col md:space-y-3 md:pt-8 lg:pt-20"
+            initial={{ opacity: 0, x: -30 }}
+            transition={{ duration: 0.8 }}
+            whileInView={{ opacity: 100, x: 0 }}
+            viewport={{ once: true }}
           >
-            <div className="mt-10 ml-[12vw] text-4xl font-extrabold md:text-6xl lg:text-8xl">
-              <h1
-                className="text-nsu-tan-100 absolute z-0 mt-[2px] ml-[2px] lg:mt-1 lg:ml-1"
-                style={{ WebkitTextStroke: "1px #70161e" }}
-              >
-                Nikkei
-              </h1>
-              <h1 className="text-nsu-red-200 relative z-10">Nikkei</h1>
-            </div>
-            <div className="ml-[22vw] text-4xl font-extrabold md:text-6xl lg:text-8xl">
-              <h1
-                className="text-nsu-tan-100 absolute z-0 mt-[2px] ml-[2px] lg:mt-1 lg:ml-1"
-                style={{ WebkitTextStroke: "1px #70161e" }}
-              >
-                Student
-              </h1>
-              <h1 className="text-nsu-red-200 relative z-10">Student</h1>
-            </div>
-            <div className="ml-[37vw] text-4xl font-extrabold md:text-6xl lg:text-8xl">
-              <h1
-                className="text-nsu-tan-100 absolute z-0 mt-[2px] ml-[2px] lg:mt-1 lg:ml-1"
-                style={{ WebkitTextStroke: "1px #70161e" }}
-              >
-                Union
-              </h1>
-              <h1 className="text-nsu-red-200 relative z-10">Union</h1>
+            <div className="flex flex-col md:space-y-3 md:pt-8 lg:pt-20">
+              <div className="mt-10 ml-[12vw] text-4xl font-extrabold md:text-6xl lg:text-8xl">
+                <h1
+                  className="text-nsu-tan-100 absolute z-0 mt-[2px] ml-[2px] lg:mt-1 lg:ml-1"
+                  style={{ WebkitTextStroke: "1px #70161e" }}
+                >
+                  Nikkei
+                </h1>
+                <h1 className="text-nsu-red-200 relative z-10">Nikkei</h1>
+              </div>
+              <div className="ml-[22vw] text-4xl font-extrabold md:text-6xl lg:text-8xl">
+                <h1
+                  className="text-nsu-tan-100 absolute z-0 mt-[2px] ml-[2px] lg:mt-1 lg:ml-1"
+                  style={{ WebkitTextStroke: "1px #70161e" }}
+                >
+                  Student
+                </h1>
+                <h1 className="text-nsu-red-200 relative z-10">Student</h1>
+              </div>
+              <div className="ml-[37vw] text-4xl font-extrabold md:text-6xl lg:text-8xl">
+                <h1
+                  className="text-nsu-tan-100 absolute z-0 mt-[2px] ml-[2px] lg:mt-1 lg:ml-1"
+                  style={{ WebkitTextStroke: "1px #70161e" }}
+                >
+                  Union
+                </h1>
+                <h1 className="text-nsu-red-200 relative z-10">Union</h1>
+              </div>
             </div>
           </motion.div>
         </div>

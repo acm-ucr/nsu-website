@@ -58,7 +58,7 @@ export const BOARD = [
   },
   {
     image: CULTURE_NIGHT1,
-    name: "Ashley Issa",
+    name: "Ashley Isa",
     role: "CO-CULTURE NIGHT CHAIR",
   },
   {
@@ -73,7 +73,7 @@ export const BOARD = [
   },
   {
     image: SPORTS,
-    name: "Maddison Osako",
+    name: "Madison Osako",
     role: "SPORTS COORDINATOR",
   },
   {
