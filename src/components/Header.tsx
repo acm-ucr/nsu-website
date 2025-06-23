@@ -6,9 +6,9 @@ import { motion } from "motion/react";
 
 const Header = ({ headerString }: { headerString: string }) => {
   return (
-    <div className="relative z-100 mx-auto mt-10 mb-5 flex w-1/2 flex-col items-center justify-center overflow-visible sm:w-1/3 md:w-1/4">
+    <div className="relative z-19 mx-auto mt-10 mb-5 flex w-1/2 flex-col items-center justify-center overflow-visible sm:w-1/3 md:w-1/4">
       <motion.div
-        className="z-99 size-[75%]"
+        className="z-18 size-[75%]"
         initial={{ opacity: 0, y: -30 }}
         whileInView={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.5 }}
