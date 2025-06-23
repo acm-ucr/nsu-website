@@ -66,57 +66,52 @@ const Gallery = () => {
   });
 
   return (
-    <div>
-      <div className="flex flex-col items-center justify-center md:ml-20 md:items-start">
+    <>
+      <div className="mb-5 flex flex-col items-center justify-center md:ml-20 md:items-start">
         <div className="text-nsu-red-200 font-nsu-main text-lg leading-9 font-bold md:mx-5 md:text-2xl">
           Photos from past years
         </div>
         <div className="bg-nsu-red-200 mx-auto my-2 h-[4px] w-7/10 md:mx-0 md:w-3/5"></div>
       </div>
 
-      <div className="mt-5 mb-5">
-        {[...Array(rows)].map((_, rowIdx) => {
-          const isEvenRow = rowIdx % 2 === 0;
-          const rowImages = gallery.slice(
-            rowIdx * imagesPerRow,
-            rowIdx * imagesPerRow + imagesPerRow,
-          );
+      {[...Array(rows)].map((_, rowIdx) => {
+        const isEvenRow = rowIdx % 2 === 0;
+        const rowImages = gallery.slice(
+          rowIdx * imagesPerRow,
+          rowIdx * imagesPerRow + imagesPerRow,
+        );
 
-          return (
-            <div
-              key={rowIdx}
-              className={`mb-1 grid grid-cols-4 gap-1 md:mb-3 md:gap-3 ${isEvenRow ? "mr-5 md:mr-15" : "ml-5 md:ml-15"}`}
-            >
-              {rowImages.map((src, i) => {
-                const globalIndex = rowIdx * imagesPerRow + i;
-                const animationVariants = AnimateGallery(
-                  isEvenRow,
-                  globalIndex,
-                );
+        return (
+          <div
+            key={rowIdx}
+            className={`mb-1 grid grid-cols-4 gap-1 md:mb-3 md:gap-3 ${isEvenRow ? "mr-5 md:mr-15" : "ml-5 md:ml-15"}`}
+          >
+            {rowImages.map((src, i) => {
+              const globalIndex = rowIdx * imagesPerRow + i;
+              const animationVariants = AnimateGallery(isEvenRow, globalIndex);
 
-                return (
-                  <motion.div
-                    key={globalIndex}
-                    variants={animationVariants}
-                    initial="initial"
-                    whileInView="whileInView"
-                    viewport={{ once: true }}
-                    className="relative aspect-square"
-                  >
-                    <Image
-                      src={src}
-                      alt={`Gallery image ${globalIndex + 1}`}
-                      fill
-                      className="object-cover"
-                    />
-                  </motion.div>
-                );
-              })}
-            </div>
-          );
-        })}
-      </div>
-    </div>
+              return (
+                <motion.div
+                  key={globalIndex}
+                  variants={animationVariants}
+                  initial="initial"
+                  whileInView="whileInView"
+                  viewport={{ once: true }}
+                  className="relative aspect-square"
+                >
+                  <Image
+                    src={src}
+                    alt={`Gallery image ${globalIndex + 1}`}
+                    fill
+                    className="object-cover"
+                  />
+                </motion.div>
+              );
+            })}
+          </div>
+        );
+      })}
+    </>
   );
 };
 

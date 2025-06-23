@@ -36,25 +36,49 @@ const Footer = () => {
             <hr className="border-nsu-gray-100 opacity-50" />
 
             <div className="mt-3 flex justify-center space-x-4 md:justify-end">
-              <Link href="/" target="_blank" aria-label="Discord">
+              <Link
+                href="https://discord.com/invite/ygjTzyzEaJ"
+                target="_blank"
+                aria-label="Discord"
+              >
                 <FaDiscord className="h-8 w-8 transform transition-transform duration-200 hover:scale-110" />
               </Link>
-              <Link href="/" target="_blank" aria-label="TikTok">
+              <Link
+                href="https://www.tiktok.com/@ucrnsu"
+                target="_blank"
+                aria-label="TikTok"
+              >
                 <FaTiktok className="h-8 w-8 transform transition-transform duration-200 hover:scale-110" />
               </Link>
-              <Link href="/" target="_blank" aria-label="Instagram">
+              <Link
+                href="https://www.instagram.com/ucrnsu"
+                target="_blank"
+                aria-label="Instagram"
+              >
                 <FaInstagram className="h-8 w-8 transform transition-transform duration-200 hover:scale-110" />
               </Link>
-              <Link href="/" target="_blank" aria-label="YouTube">
+              <Link
+                href="https://www.youtube.com/@ucrnikkeistudentunion6075/videos"
+                target="_blank"
+                aria-label="YouTube"
+              >
                 <FaYoutube className="h-8 w-8 transform transition-transform duration-200 hover:scale-110" />
               </Link>
-              <Link href="/" target="_blank" aria-label="Linktree">
+              <Link
+                href="https://linktr.ee/ucrnsu"
+                target="_blank"
+                aria-label="Linktree"
+              >
                 <SiLinktree className="h-8 w-8 transform transition-transform duration-200 hover:scale-110" />
               </Link>
-              <Link href="/" target="_blank" aria-label="LinkedIn">
+              <Link
+                href="https://www.linkedin.com/company/ucr-nikkei-student-union/?fbclid=IwAR1Y-K_l1ok9yIYGtM3VgfBSPMrdPVF7uDiyj5dQV_rXct6LX3DZWd187ck"
+                target="_blank"
+                aria-label="LinkedIn"
+              >
                 <FaLinkedinIn className="h-8 w-8 transform transition-transform duration-200 hover:scale-110" />
               </Link>
-              <Link href="mailto:someone@example.com" aria-label="Email">
+              <Link href="mailto:ucr.nsu@gmail.com" aria-label="Email">
                 <FiMail className="h-8 w-8 transform transition-transform duration-200 hover:scale-110" />
               </Link>
             </div>

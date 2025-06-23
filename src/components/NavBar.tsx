@@ -55,7 +55,7 @@ const NavBar = () => {
             </div>
           ))}
           <Link
-            href="/404"
+            href="https://linktr.ee/ucrnsu"
             className="bg-nsu-red-200 mr-6 rounded-lg p-[2%] text-white duration-150 hover:scale-110 lg:rounded-[16px] lg:text-3xl"
           >
             JOIN
@@ -101,7 +101,7 @@ const NavBar = () => {
               </Link>
             </div>
           ))}
-          <Link href="/404">JOIN</Link>
+          <Link href="https://linktr.ee/ucrnsu">JOIN</Link>
         </div>
       )}
     </div>

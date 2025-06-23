@@ -18,10 +18,11 @@ const NotFound = () => {
         className="absolute z-5 mt-35 duration-150 motion-safe:hover:scale-110 md:mt-42 lg:mt-105"
       >
         <Button variant="notfound" className="rounded-3xl p-5 md:p-7 lg:p-11">
-          <Link href="/">
-            <div className="flex w-full text-2xl md:text-3xl lg:text-4xl">
-              HOME
-            </div>
+          <Link
+            href="/"
+            className="flex w-full text-2xl md:text-3xl lg:text-4xl"
+          >
+            HOME
           </Link>
         </Button>
       </motion.div>
@@ -56,7 +57,6 @@ const NotFound = () => {
           >
             <Image src={kitsuneImg} alt="fox icon" />
           </motion.div>
-
           <motion.div
             initial={{ opacity: 0, x: -100 }}
             transition={{ duration: 0.8 }}
@@ -64,15 +64,11 @@ const NotFound = () => {
             viewport={{ once: true }}
             className="flex items-center justify-center text-6xl font-bold md:text-7xl lg:text-9xl"
           >
-            <h1
-              className="text-nsu-tan-100 absolute z-0 mr-1 mb-1 lg:mr-2 lg:mb-2"
-              style={{ WebkitTextStroke: "2px #70161e" }}
-            >
+            <h1 className="text-nsu-tan-100 absolute z-0 mr-1 mb-1 [text-shadow:_2px_2px_0_#70161e,_-2px_-2px_0_#70161e,_2px_-2px_0_#70161e,_-2px_2px_0_#70161e] lg:mr-2 lg:mb-2">
               404
             </h1>
             <h1 className="text-nsu-red-200 z-1">404</h1>
           </motion.div>
-
           <motion.div
             initial={{ opacity: 0, x: -100 }}
             transition={{ duration: 0.8, delay: 0.2 }}
