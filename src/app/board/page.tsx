@@ -1,4 +1,4 @@
-import BoardGrid from "@/components/board/BoardGrid";
+import BoardGrid from "@/components/board/Grid";
 import Header from "@/components/Header";
 
 const Page = () => {

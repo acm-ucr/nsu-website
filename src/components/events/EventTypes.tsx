@@ -2,14 +2,14 @@
 import React from "react";
 import Image from "next/image";
 import { motion } from "motion/react";
-import DangoImg from "../../../public/events/tanghulu.webp";
-import BigLittle from "../../../public/events/reveal.webp";
-import RamenImg from "../../../public/events/ramen.webp";
-import RetreatImg from "../../../public/events/winter_retreat.webp";
-import OnigiriImg from "../../../public/events/onigiri.webp";
-import CultureNightImg from "../../../public/events/culture_night.webp";
-import TaiyakiImg from "../../../public/events/taiyaki.webp";
-import BanquetImg from "../../../public/events/banquet.webp";
+import DangoImg from "@/public/events/tanghulu.webp";
+import BigLittle from "@/public/events/reveal.webp";
+import RamenImg from "@/public/events/ramen.webp";
+import RetreatImg from "@/public/events/winter_retreat.webp";
+import OnigiriImg from "@/public/events/onigiri.webp";
+import CultureNightImg from "@/public/events/culture_night.webp";
+import TaiyakiImg from "@/public/events/taiyaki.webp";
+import BanquetImg from "@/public/events/banquet.webp";
 
 const fadeFromLeft = {
   initial: { opacity: 0, x: -50 },
@@ -94,7 +94,6 @@ const EventTypes = () => {
       event.isReversed ? "py-8 md:py-32" : ""
     } lg:grid-cols-2 ${isLastEvent ? "" : "mb-8"}`;
 
-    // Use fadeFromLeft for 1st and 3rd events (index 0, 2), fadeFromRight for 2nd and 4th events (index 1, 3)
     const animationProps = index % 2 === 0 ? fadeFromLeft : fadeFromRight;
 
     if (event.isReversed) {
@@ -104,35 +103,29 @@ const EventTypes = () => {
           className={containerClasses}
           {...animationProps}
         >
-          <div className="order-2 flex flex-col items-center justify-center md:row-span-2 lg:order-1">
-            <div className="relative mx-16 flex w-[90%] justify-center">
-              <Image
-                src={event.mainImage}
-                alt={`${event.title} Image Shadow`}
-                className="w-full translate-x-2 translate-y-2 rounded-lg opacity-50 md:translate-x-4 md:translate-y-4"
-              />
-              <Image
-                src={event.mainImage}
-                alt={`${event.title} Image`}
-                className="absolute z-10 w-full rounded-lg"
-              />
-            </div>
+          <div className="relative order-2 mx-16 flex w-[90%] flex-col items-center justify-center md:row-span-2 lg:order-1">
+            <Image
+              src={event.mainImage}
+              alt={`${event.title} Image Shadow`}
+              className="w-full translate-x-2 translate-y-2 rounded-lg opacity-50 md:translate-x-4 md:translate-y-4"
+            />
+            <Image
+              src={event.mainImage}
+              alt={`${event.title} Image`}
+              className="absolute z-10 w-full rounded-lg"
+            />
           </div>
           <div className="relative order-1 lg:order-1">
-            <div className="overflow-hidden">
-              <div
-                className="border-nsu-red-200 relative ml-45 flex w-full flex-col rounded-lg border-4 md:ml-20 md:rounded-2xl md:border-6 2xl:ml-45"
-                style={{ boxShadow: "inset 0 0 8px 5px rgba(0, 0, 0, 0.3)" }}
-              >
-                <div className="ml-8 flex flex-col items-start py-1 md:py-4 lg:ml-10">
-                  <div className="flex flex-col items-start">
-                    <div className="font-urbanist text-nsu-red-200 text-xl font-extrabold md:text-4xl lg:text-4xl xl:text-5xl">
-                      {event.title}
-                    </div>
-                    <div className="font-urbanist text-nsu-red-200 text-lg font-extrabold md:text-2xl lg:text-2xl xl:text-3xl">
-                      {event.season}
-                    </div>
-                  </div>
+            <div
+              className="border-nsu-red-200 relative ml-45 flex w-full flex-col rounded-lg border-4 md:ml-20 md:rounded-2xl md:border-6 2xl:ml-45"
+              style={{ boxShadow: "inset 0 0 8px 5px rgba(0, 0, 0, 0.3)" }}
+            >
+              <div className="ml-8 py-1 md:py-4 lg:ml-10">
+                <div className="font-urbanist text-nsu-red-200 text-xl font-extrabold md:text-4xl lg:text-4xl xl:text-5xl">
+                  {event.title}
+                </div>
+                <div className="font-urbanist text-nsu-red-200 text-lg font-extrabold md:text-2xl lg:text-2xl xl:text-3xl">
+                  {event.season}
                 </div>
               </div>
             </div>
@@ -141,7 +134,7 @@ const EventTypes = () => {
               alt={`${event.title} Clipart`}
               className={event.clipartClasses}
             />
-          </div>{" "}
+          </div>
           <p className="text-urbanist order-3 mx-10 py-7 text-center text-xl/7 tracking-wide md:order-3 md:ml-10 md:w-9/10 md:py-10 md:text-2xl/8 lg:w-9/10 lg:text-end lg:text-2xl/10 xl:text-3xl/10">
             {event.description}
           </p>
@@ -159,14 +152,12 @@ const EventTypes = () => {
             className="border-nsu-red-200 relative flex w-6/10 flex-col rounded-lg border-4 md:w-8/10 md:rounded-2xl md:border-6"
             style={{ boxShadow: "inset 0 0 8px 5px rgba(0, 0, 0, 0.3)" }}
           >
-            <div className="ml-8 flex flex-col items-start py-1 md:py-4 lg:ml-10 xl:ml-20">
-              <div className="flex flex-col items-start md:items-end">
-                <div className="font-urbanist text-nsu-red-200 text-xl font-extrabold md:text-4xl lg:text-4xl xl:text-5xl">
-                  {event.title}
-                </div>
-                <div className="font-urbanist text-nsu-red-200 text-lg font-extrabold md:text-2xl lg:text-2xl xl:text-3xl">
-                  {event.season}
-                </div>
+            <div className="ml-8 py-1 md:py-4 lg:ml-10 xl:ml-20">
+              <div className="font-urbanist text-nsu-red-200 text-xl font-extrabold md:text-4xl lg:text-4xl xl:text-5xl">
+                {event.title}
+              </div>
+              <div className="font-urbanist text-nsu-red-200 text-lg font-extrabold md:text-2xl lg:text-2xl xl:text-3xl">
+                {event.season}
               </div>
             </div>
             <Image
@@ -176,20 +167,18 @@ const EventTypes = () => {
             />
           </div>
         </div>
-        <div className="order-2 flex flex-col items-center justify-center md:order-2 md:row-span-2">
-          <div className="relative mx-16 flex w-[90%] justify-center">
-            <Image
-              src={event.mainImage}
-              alt={`${event.title} Image Shadow`}
-              className="w-full translate-x-2 translate-y-2 rounded-lg opacity-50 md:translate-x-4 md:translate-y-4"
-            />
-            <Image
-              src={event.mainImage}
-              alt={`${event.title} Image`}
-              className="absolute z-10 w-full rounded-lg"
-            />
-          </div>
-        </div>{" "}
+        <div className="relative order-2 mx-16 flex w-[90%] flex-col items-center justify-center md:order-2 md:row-span-2">
+          <Image
+            src={event.mainImage}
+            alt={`${event.title} Image Shadow`}
+            className="w-full translate-x-2 translate-y-2 rounded-lg opacity-50 md:translate-x-4 md:translate-y-4"
+          />
+          <Image
+            src={event.mainImage}
+            alt={`${event.title} Image`}
+            className="absolute z-10 w-full rounded-lg"
+          />
+        </div>
         <p className="text-urbanist order-3 mx-10 py-7 text-center text-xl/7 tracking-wide md:order-3 md:ml-10 md:w-9/10 md:py-10 md:text-2xl/8 lg:w-9/10 lg:text-start lg:text-2xl/10 xl:ml-20 xl:text-3xl/10">
           {event.description}
         </p>

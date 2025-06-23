@@ -46,7 +46,7 @@ const gallery = [
   "/photos/reveal.webp",
 ];
 
-const Gallery2 = () => {
+const Gallery = () => {
   const imagesPerRow = 4;
   const rows = Math.ceil(gallery.length / imagesPerRow);
 
@@ -120,4 +120,4 @@ const Gallery2 = () => {
   );
 };
 
-export default Gallery2;
+export default Gallery;

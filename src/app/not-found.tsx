@@ -1,10 +1,10 @@
 "use client";
 import Image from "next/image";
 import Link from "next/link";
-import { Button } from "../components/Button";
-import nekoImg from "../../public/assets/nsu9.webp";
-import kitsuneImg from "../../public/assets/nsu10.webp";
-import inuImg from "../../public/assets/nsu11.webp";
+import { Button } from "@/components/Button";
+import nekoImg from "@/public/assets/nsu9.webp";
+import kitsuneImg from "@/public/assets/nsu10.webp";
+import inuImg from "@/public/assets/nsu11.webp";
 import { motion } from "motion/react";
 
 const NotFound = () => {

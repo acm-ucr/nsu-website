@@ -1,7 +1,7 @@
 "use client";
 
 import Image from "next/image";
-import fanImg from "../../public/assets/fan.webp";
+import fanImg from "@/public/assets/fan.webp";
 import { motion } from "motion/react";
 
 const Header = ({ headerString }: { headerString: string }) => {

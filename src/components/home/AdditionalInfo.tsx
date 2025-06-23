@@ -38,13 +38,13 @@ const AdditionalInfo = () => {
 
   return (
     <div className="my-8 flex w-3/4 flex-col items-center xl:w-1/2">
-      <motion.p
+      <motion.div
         {...titleAnimation}
         className="font-urbanist text-nsu-red-300 text-md mt-2 mb-4 flex w-[70%] flex-col items-center font-bold md:text-2xl lg:text-3xl xl:text-4xl"
       >
         Additional Information
         <div className="bg-nsu-red-300 mb-2 h-[4px] w-[85%]" />
-      </motion.p>
+      </motion.div>
 
       <motion.div
         {...fadeInRight}
