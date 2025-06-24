@@ -63,6 +63,7 @@ const Gallery = () => {
         delay: index * 0.1,
       },
     },
+    viewport: { once: true },
   });
 
   return (
@@ -93,10 +94,7 @@ const Gallery = () => {
               return (
                 <motion.div
                   key={globalIndex}
-                  variants={animationVariants}
-                  initial="initial"
-                  whileInView="whileInView"
-                  viewport={{ once: true }}
+                  {...animationVariants}
                   className="relative aspect-square"
                 >
                   <Image

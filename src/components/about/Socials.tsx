@@ -14,6 +14,7 @@ const AnimateLanternStrings = (index: number) => ({
       ease: easeOut,
     },
   },
+  viewport: { once: true },
 });
 
 const AnimateLanterns = (index: number) => ({
@@ -27,6 +28,7 @@ const AnimateLanterns = (index: number) => ({
       ease: easeOut,
     },
   },
+  viewport: { once: true },
 });
 
 const Socials = () => {
@@ -42,18 +44,12 @@ const Socials = () => {
           <div key={index} className={`flex w-1/7 flex-col items-center ${ml}`}>
             <motion.div
               style={{ originY: 0 }}
-              variants={AnimateLanternStrings(index)}
-              initial="initial"
-              whileInView="whileInView"
-              viewport={{ once: true }}
+              {...AnimateLanternStrings(index)}
               className={`${lineHeight} border-nsu-red-300 border-r-4 lg:border-r-5 xl:border-r-6`}
             />
             <motion.div
               className="flex w-full flex-col items-center"
-              variants={AnimateLanterns(index)}
-              initial="initial"
-              whileInView="whileInView"
-              viewport={{ once: true }}
+              {...AnimateLanterns(index)}
             >
               <div className="border-nsu-red-200 -mb-0.5 h-1/35 w-1/3 rounded-full border-4 lg:-mb-1 lg:border-5" />
               <div className="border-nsu-red-200 flex aspect-square w-full items-center justify-center rounded-[2.5rem] border-4 lg:rounded-[3.5rem] lg:border-5 xl:rounded-[4.5rem]">
@@ -74,12 +70,7 @@ const Socials = () => {
       {/*Mobile*/}
       <div className="relative m-4 grid grid-cols-2 gap-12 md:hidden">
         {socialLanterns.map(({ icon, href }, index) => (
-          <motion.div
-            key={index}
-            variants={AnimateLanterns(index)}
-            initial="initial"
-            whileInView="whileInView"
-          >
+          <motion.div key={index} {...AnimateLanterns(index)}>
             <div>
               <Link
                 className="text-nsu-red-300 flex items-center duration-150 hover:scale-110"
