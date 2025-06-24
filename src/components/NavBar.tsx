@@ -5,6 +5,7 @@ import Link from "next/link";
 import NSULogo from "@/public/assets/logo1.webp";
 import { Menu } from "lucide-react";
 import { useState } from "react";
+import { usePathname } from "next/navigation";
 
 const NAVBAR = [
   {
@@ -28,6 +29,8 @@ const NAVBAR = [
 const NavBar = () => {
   const [isOpen, setIsOpen] = useState(false);
 
+  const pathName = usePathname();
+
   return (
     <div className="relative flex w-full flex-row items-center bg-black font-bold">
       {/*Desktop*/}
@@ -36,20 +39,24 @@ const NavBar = () => {
           <Image src={NSULogo} alt="NSU_LOGO" className="m-2 w-1/3 lg:w-auto" />
           <div className="px-4 text-3xl text-white lg:text-4xl">NSU</div>
         </Link>
-        <div className="ml-auto flex items-center justify-center gap-4 text-2xl text-white lg:gap-12 lg:text-3xl">
+        <div className="ml-auto flex items-center justify-center gap-4 text-2xl text-white lg:gap-8 lg:text-3xl">
           {NAVBAR.map(({ href, title }, index) => (
             <div key={index} className="relative">
               <Link
                 href={href}
-                className="hover:text-nsu-gray-200 no-underline duration-150 hover:scale-110 hover:underline"
+                className={`${
+                  pathName === href
+                    ? "text-nsu-red-100 underline"
+                    : "hover:text-nsu-gray-200 no-underline duration-150 hover:scale-110 hover:underline"
+                }`}
               >
                 {title}
               </Link>
             </div>
           ))}
           <Link
-            href="/404"
-            className="bg-nsu-red-200 mx-6 rounded-lg p-[2%] text-white duration-150 hover:scale-110 lg:rounded-[16px] lg:text-3xl"
+            href="https://linktr.ee/ucrnsu"
+            className="bg-nsu-red-200 mr-6 rounded-lg p-[2%] text-white duration-150 hover:scale-110 lg:rounded-[16px] lg:text-3xl"
           >
             JOIN
           </Link>
@@ -68,15 +75,33 @@ const NavBar = () => {
         />
       </div>
       {isOpen && (
-        <div className="absolute z-20 mt-48 flex w-full flex-col items-center justify-center bg-black pb-4 text-xl font-medium text-white">
-          <Link href="/">HOME</Link>
+        <div className="absolute z-20 mt-54 flex w-full flex-col items-center justify-center bg-black pb-4 text-xl font-medium text-white">
+          <Link
+            href="/"
+            className={`${
+              pathName === "/"
+                ? "text-nsu-red-100 underline"
+                : "hover:text-nsu-gray-200 no-underline duration-150 hover:scale-110 hover:underline"
+            }`}
+          >
+            HOME
+          </Link>
           {NAVBAR.map(({ href, title }, index) => (
             <div key={index} className="">
-              <Link href={href} onClick={() => setIsOpen(false)}>
+              <Link
+                href={href}
+                onClick={() => setIsOpen(false)}
+                className={`${
+                  pathName === href
+                    ? "text-nsu-red-100 underline"
+                    : "hover:text-nsu-gray-200 no-underline duration-150 hover:scale-110 hover:underline"
+                }`}
+              >
                 {title}
               </Link>
             </div>
           ))}
+          <Link href="https://linktr.ee/ucrnsu">JOIN</Link>
         </div>
       )}
     </div>

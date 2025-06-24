@@ -12,7 +12,7 @@ import {
 import { SiLinktree } from "react-icons/si";
 import { FiMail } from "react-icons/fi";
 
-const Footer: React.FC = () => {
+const Footer = () => {
   return (
     <footer className="relative w-full">
       <div className="h-55 w-full bg-[url('/assets/footer.svg')] bg-[length:450px] bg-clip-content bg-top bg-repeat-x contrast-150 [-ms-interpolation-mode:nearest-neighbor] [image-rendering:crisp-edges]" />
@@ -36,26 +36,50 @@ const Footer: React.FC = () => {
             <hr className="border-nsu-gray-100 opacity-50" />
 
             <div className="mt-3 flex justify-center space-x-4 md:justify-end">
-              <Link href="/" target="_blank" aria-label="Discord">
-                <FaDiscord className="h-8 w-8" />
+              <Link
+                href="https://discord.com/invite/ygjTzyzEaJ"
+                target="_blank"
+                aria-label="Discord"
+              >
+                <FaDiscord className="h-8 w-8 transform transition-transform duration-200 hover:scale-110" />
               </Link>
-              <Link href="/" target="_blank" aria-label="TikTok">
-                <FaTiktok className="h-8 w-8" />
+              <Link
+                href="https://www.tiktok.com/@ucrnsu"
+                target="_blank"
+                aria-label="TikTok"
+              >
+                <FaTiktok className="h-8 w-8 transform transition-transform duration-200 hover:scale-110" />
               </Link>
-              <Link href="/" target="_blank" aria-label="Instagram">
-                <FaInstagram className="h-8 w-8" />
+              <Link
+                href="https://www.instagram.com/ucrnsu"
+                target="_blank"
+                aria-label="Instagram"
+              >
+                <FaInstagram className="h-8 w-8 transform transition-transform duration-200 hover:scale-110" />
               </Link>
-              <Link href="/" target="_blank" aria-label="YouTube">
-                <FaYoutube className="h-8 w-8" />
+              <Link
+                href="https://www.youtube.com/@ucrnikkeistudentunion6075/videos"
+                target="_blank"
+                aria-label="YouTube"
+              >
+                <FaYoutube className="h-8 w-8 transform transition-transform duration-200 hover:scale-110" />
               </Link>
-              <Link href="/" target="_blank" aria-label="Linktree">
-                <SiLinktree className="h-8 w-8" />
+              <Link
+                href="https://linktr.ee/ucrnsu"
+                target="_blank"
+                aria-label="Linktree"
+              >
+                <SiLinktree className="h-8 w-8 transform transition-transform duration-200 hover:scale-110" />
               </Link>
-              <Link href="/" target="_blank" aria-label="LinkedIn">
-                <FaLinkedinIn className="h-8 w-8" />
+              <Link
+                href="https://www.linkedin.com/company/ucr-nikkei-student-union/?fbclid=IwAR1Y-K_l1ok9yIYGtM3VgfBSPMrdPVF7uDiyj5dQV_rXct6LX3DZWd187ck"
+                target="_blank"
+                aria-label="LinkedIn"
+              >
+                <FaLinkedinIn className="h-8 w-8 transform transition-transform duration-200 hover:scale-110" />
               </Link>
-              <Link href="mailto:someone@example.com" aria-label="Email">
-                <FiMail className="h-8 w-8" />
+              <Link href="mailto:ucr.nsu@gmail.com" aria-label="Email">
+                <FiMail className="h-8 w-8 transform transition-transform duration-200 hover:scale-110" />
               </Link>
             </div>
           </div>

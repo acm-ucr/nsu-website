@@ -5,12 +5,12 @@ import Header from "@/components/Header";
 
 const Page = () => {
   return (
-    <div>
+    <>
       <Header headerString="ABOUT" />
       <AboutSection1 />
       <AboutSection2 />
       <Socials />
-    </div>
+    </>
   );
 };
 

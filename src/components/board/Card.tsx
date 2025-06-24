@@ -1,9 +1,7 @@
 "use client";
 
-import React from "react";
 import Image, { StaticImageData } from "next/image";
 
-// Only accept statically imported images via StaticImageData
 interface BoardCardProps {
   image: StaticImageData;
   name: string;
