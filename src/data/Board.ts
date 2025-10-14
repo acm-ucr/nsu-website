@@ -64,12 +64,12 @@ export const BOARD = [
   {
     image: CULTURE_NIGHT1,
     name: "Celina Pirkl",
-    role: "CO-CULTURE NIGHT CHAIR",
+    role: "CULTURE NIGHT CHAIR",
   },
   {
     image: CULTURE_NIGHT2,
     name: "Olivia Quach",
-    role: "CO-CULTURE NIGHT CHAIR",
+    role: "CULTURE NIGHT CHAIR",
   },
   {
     image: PR,
